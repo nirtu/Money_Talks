@@ -1,0 +1,30 @@
+﻿@model Money_Talks.Models.Account
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Account</legend>
+
+    <div class="display-label">Transaction</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Transaction)
+    </div>
+
+    <div class="display-label">Date Created</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TransactionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

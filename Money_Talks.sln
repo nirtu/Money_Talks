@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money_Talks", "Money_Talks\Money_Talks.csproj", "{0B597237-B1BF-43FC-BF1E-9A840A0C6873}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED2BC09E-DFE6-4B81-9F04-FDB55EBD7E35}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Money_Talks.vsmdi = Money_Talks.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Money_Talks.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B597237-B1BF-43FC-BF1E-9A840A0C6873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B597237-B1BF-43FC-BF1E-9A840A0C6873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B597237-B1BF-43FC-BF1E-9A840A0C6873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B597237-B1BF-43FC-BF1E-9A840A0C6873}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,88 @@
+﻿@using Money_Talks.Models
+@model IEnumerable<Money_Talks.Models.Account>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+  long bal = 0;
+  
+  Account[] arr = Model.ToArray();
+  if (arr.Length != 0)
+  {
+      //bal = a[a.Length - 1].Balance;
+      foreach(var currAcc in arr)
+      {
+          if(currAcc != null)
+          {
+              bal += currAcc.Transaction;
+          }    
+      }
+  }
+}
+
+<p>
+    @Html.ActionLink("Test", "Pop")
+</p>
+<p>
+    <font size="3" face="arial" color="green">
+        Current Balance: @bal
+    </font>
+    
+    @{
+        if(bal == 0)
+        {
+            <br/> <br/>
+            <font size="4" face="arial" color="green">
+                Your balance is stable
+            </font>
+        }
+        else if (bal < 0)
+        {
+            <br/> <br/>
+            <font size="4" face="arial" color="red">
+                Your balance is below zero
+            </font>
+        }          
+    }
+</p>
+
+<p>
+    @Html.ActionLink("Create New Transaction", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Transaction
+        </th>
+        <th>
+            Date Created
+        </th>
+        <th>
+            Category
+        </th>
+    </tr>
+
+@foreach (var item in Model.Reverse())
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transaction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TransactionId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TransactionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TransactionId })
+        </td>
+    </tr>
+}
+
+</table>
