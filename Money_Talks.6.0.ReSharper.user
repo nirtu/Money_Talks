@@ -1,0 +1,197 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:Web.config" caret="312" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="36" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="489" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="291" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="1304" fromTop="21" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:AccountDbContext_Money_Talks/f:Models_.cs" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Web.config" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:packages.config" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="439" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:About.cshtml" caret="224" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="529" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="289" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1963" fromTop="60" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="712" fromTop="20" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="130" fromTop="2" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="19" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="1" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="543" fromTop="20" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="289" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="75" fromTop="1" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1162" fromTop="15" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1739" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="186" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="388" fromTop="19" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2796" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2748" fromTop="19" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1177" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="999" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="325" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="191" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2126" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2588" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1836" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2021" fromTop="16" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="697" fromTop="10" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="918" fromTop="22" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="883" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="771" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="676" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="798" fromTop="18" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="580" fromTop="5" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="View`0" priority="58" />
+      <Item value="ActionResult`0" priority="31" />
+      <Item value="public" priority="253" />
+      <Item value="long" priority="155" />
+      <Item value="int" priority="63" />
+      <Item value="string" priority="95" />
+      <Item value="db" priority="479" />
+      <Item value="DuplicateNameException`0" priority="31" />
+      <Item value="a" priority="287" />
+      <Item value="account" priority="410" />
+      <Item value="DateTime`0" priority="59" />
+      <Item value="dateTime" priority="31" />
+      <Item value="AccountDbContext`0" priority="158" />
+      <Item value="Account`0" priority="312" />
+      <Item value="Account" priority="58" />
+      <Item value="AccountId" priority="26" />
+      <Item value="List" priority="31" />
+      <Item value="Balance" priority="27" />
+      <Item value="Category" priority="27" />
+      <Item value="DateCreated" priority="32" />
+      <Item value="Money_Talks" priority="25" />
+      <Item value="Models" priority="27" />
+      <Item value="BalanceAccountInitializer" priority="29" />
+      <Item value="decimal" priority="30" />
+      <Item value="void" priority="31" />
+      <Item value="if" priority="287" />
+      <Item value="foreach" priority="90" />
+      <Item value="DbContext`0" priority="31" />
+      <Item value="sum" priority="159" />
+      <Item value="ViewBag" priority="26" />
+      <Item value="return" priority="31" />
+      <Item value="HomeController`0" priority="31" />
+      <Item value="ModelState`0" priority="31" />
+      <Item value="HtmlHelper`0" priority="31" />
+      <Item value="MvcHtmlString`0" priority="26" />
+      <Item value="item" priority="95" />
+      <Item value="private" priority="63" />
+      <Item value="BalanceAccountController`0" priority="63" />
+      <Item value="_currBalance" priority="159" />
+      <Item value="ModelState" priority="63" />
+      <Item value="new" priority="31" />
+      <Item value="ie" priority="63" />
+      <Item value="IEnumerator" priority="26" />
+      <Item value="l" priority="63" />
+      <Item value="ac" priority="95" />
+      <Item value="Length" priority="108" />
+      <Item value="else" priority="63" />
+      <Item value="modelItem" priority="26" />
+      <Item value="model" priority="29" />
+      <Item value="bal" priority="127" />
+      <Item value="temp" priority="95" />
+      <Item value="var" priority="31" />
+      <Item value="in" priority="31" />
+      <Item value="currAcc" priority="63" />
+      <Item value="acc" priority="31" />
+      <Item value="s" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Money_Talks.Models.AccountDbContext">
+      <Item value="Database" priority="76" />
+      <Item value="Accounts" priority="448" />
+      <Item value="Configuration" priority="22" />
+      <Item value="Dispose`0" priority="26" />
+      <Item value="Entry`1" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="ElementAt`1" priority="26" />
+      <Item value="Count`1" priority="53" />
+      <Item value="Sum`1" priority="22" />
+      <Item value="First`1" priority="54" />
+      <Item value="AsEnumerable`1" priority="49" />
+      <Item value="ToList`1" priority="22" />
+      <Item value="ToArray`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Money_Talks.Models.Account">
+      <Item value="Balance" priority="618" />
+      <Item value="DateCreated" priority="22" />
+      <Item value="Category" priority="274" />
+      <Item value="Transaction" priority="164" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Equals`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="Display`0" priority="22" />
+      <Item value="EditorFor`2" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="First`1" priority="53" />
+      <Item value="GetEnumerator`0" priority="54" />
+      <Item value="ToArray`1" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="br" priority="30" />
+      <Item value="p" priority="17" />
+      <Item value="font" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Database">
+      <Item value="Initialize`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerator`1">
+      <Item value="Current" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ElementAt`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="model" priority="9" />
+      <Item value="long" priority="17" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>
