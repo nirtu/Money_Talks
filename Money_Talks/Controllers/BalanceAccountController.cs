@@ -50,7 +50,7 @@ namespace Money_Talks.Controllers
                 foreach (var acc in db.Accounts)
                 {
                     if (acc != null)
-                        account.Balance += acc.Transaction;
+                        account.Balance += acc.Amount;
                 }
 
                 db.SaveChanges();
@@ -82,7 +82,7 @@ namespace Money_Talks.Controllers
                 foreach (var acc in db.Accounts)
                 {
                     if (acc != null)
-                        account.Balance += acc.Transaction;
+                        account.Balance += acc.Amount;
                 }
 
                 db.SaveChanges();

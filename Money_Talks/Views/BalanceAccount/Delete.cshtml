@@ -10,9 +10,14 @@
 <fieldset>
     <legend>Account</legend>
 
-    <div class="display-label">Transaction</div>
+    <div class="display-label">Amount</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Transaction)
+        @Html.DisplayFor(model => model.Amount)
+    </div>
+
+    <div class="display-label">Transaction Type</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransactionType)
     </div>
 
     <div class="display-label">Date Created</div>

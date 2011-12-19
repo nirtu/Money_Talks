@@ -12,11 +12,18 @@
   if (arr.Length != 0)
   {
       //bal = a[a.Length - 1].Balance;
-      foreach(var currAcc in arr)
+      foreach(var currentAccount in arr)
       {
-          if(currAcc != null)
+          if(currentAccount != null)
           {
-              bal += currAcc.Transaction;
+              if(currentAccount.TransactionType.Equals("Income"))
+              {
+                  bal += currentAccount.Amount; 
+              }
+              else
+              {
+                  bal -= currentAccount.Amount;
+              }
           }    
       }
   }
@@ -48,13 +55,21 @@
     }
 </p>
 
+<p>@Html.ActionLink("Create New Transaction", "Create")<br/><br/></p>
+
 <p>
-    @Html.ActionLink("Create New Transaction", "Create")
+    <font size="3" face="arial">
+        Recent Transactions:
+    </font>
 </p>
+
 <table>
     <tr>
         <th>
-            Transaction
+            Amount
+        </th>
+        <th>
+            Transaction Type
         </th>
         <th>
             Date Created
@@ -68,7 +83,10 @@
 {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Transaction)
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransactionType)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateCreated)

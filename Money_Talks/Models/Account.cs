@@ -10,9 +10,13 @@ namespace Money_Talks.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [DisplayName("Transaction")]
-        [Required(ErrorMessage = "Transaction is required")]
-        public long Transaction { get; set; }
+        [DisplayName("Amount")]
+        [Required(ErrorMessage = "Amount is required")]
+        public long Amount { get; set; }
+
+        [DisplayName("Transaction Type")]
+        [Required(ErrorMessage = "Transaction type is required")]
+        public string TransactionType { get; set; }
 
         [DisplayName("Category")]
         [Required(ErrorMessage = "Category is required")]

@@ -6,6 +6,13 @@
 
 <h2>Pop</h2>
 
+
+
+
+
+
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd"> 
 <html> 
 <head> 
@@ -39,12 +46,25 @@
         document.getElementById('mytxt').firstChild.data = ''
     } 
 </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head> 
 <body> 
 <div id="myid"> 
 <span>text 1 </span> <span>text 2 </span> <span>text 3 </span> 
 </div> 
-<br> 
+<br/> 
 <div id="mytxt">&nbsp;</div> 
 </body> 
 </html>  
@@ -70,38 +90,44 @@ elements*/
 <script type="text/javascript">
     //findPos function is from http://www.quirksmode.org/js/findpos.html;
     //where its workings are explained in more detail.
-    function findPos(obj) {
-        var curleft = curtop = 0;
-        if (obj.offsetParent) {
-            curleft = obj.offsetLeft
-            curtop = obj.offsetTop
-            while (obj = obj.offsetParent) {
-                curleft += obj.offsetLeft
-                curtop += obj.offsetTop
+    function findPos(obj) 
+    {
+        var curtop = 0;
+        var curleft = 0;
+        if (obj.offsetParent) 
+        {
+            curleft = obj.offsetLeft;
+            curtop = obj.offsetTop;
+            while (obj = obj.offsetParent) 
+            {
+                curleft += obj.offsetLeft;
+                curtop += obj.offsetTop;
             }
         }
         return [curleft, curtop];
     }
 
     //Display a named menu, at the position of another object
-    function display_menu(parent, named) {
+    function display_menu(parent, named)
+    {
         //get the named menu
-        var menu_element = document.getElementById(named);
+        var menuElement = document.getElementById(named);
         //override the 'display:none;' style attribute
-        menu_element.style.display = "";
+        menuElement.style.display = "";
         //get the placement of the element that invoked the menu...
         var placement = findPos(parent);
         //...and put the menu there
-        menu_element.style.left = placement[0] + "px";
-        menu_element.style.top = placement[1] + "px";
+        menuElement.style.left = placement[0] + "px";
+        menuElement.style.top = placement[1] + "px";
     }
 
     //Hide a named menu
-    function hide_menu(named) {
+    function hide_menu(named)
+    {
         //get the named menu
-        var menu_element = document.getElementById(named);
+        var menuElement = document.getElementById(named);
         //hide it with a style attribute
-        menu_element.style.display = "none";
+        menuElement.style.display = "none";
     }
 </script>
 </head>
@@ -131,7 +157,40 @@ Other text here, should not be obscured on pops.
 <p>
 Other text here, should not be obscured on pops.
 </p>
-<a href="#" onmouseover="display_menu(this,'menu1')">Popup on hover</a>
+<a href="#" onmouseover="display_menu(this,'menu1')">Popup on hover<br/></a>
+
+</body>
+</html>
+
+
+
+
+
+
+<html>
+<head><title></title></head>
+<body>
+
+<script>    function $(id) { return document.getElementById(id); } </script>
+
+<input id="num" type="text" readonly="true"/>
+<input type="button" value="..." onclick="$('keypad').style.display='inline-block';"/>
+
+<div id="keypad" style="display:none; background:#AAA; vertical-align:top;">
+<input type="button" value=" 1 " onclick="$('num').value+=1;"/>
+<input type="button" value=" 2 " onclick="$('num').value+=2;"/>
+<input type="button" value=" 3 " onclick="$('num').value+=3;"/><br/>
+<input type="button" value=" 4 " onclick="$('num').value+=4;"/>
+<input type="button" value=" 5 " onclick="$('num').value+=5;"/>
+<input type="button" value=" 6 " onclick="$('num').value+=6;"/><br/>
+<input type="button" value=" 7 " onclick="$('num').value+=7;"/>
+<input type="button" value=" 8 " onclick="$('num').value+=8;"/>
+<input type="button" value=" 9 " onclick="$('num').value+=9;"/><br/>
+<input type="button" value=" X " onclick="$('keypad').style.display='none'"/>
+<input type="button" value=" 0 " onclick="$('num').value+=0;"/>
+<input type="button" value="&larr;" onclick="$('num').value=$('num').value.substr(0,$('num').value.length-1);"/>
+<input type="button" value=" . " onclick="$('num').value+='.';"/>
+</div>
 
 </body>
 </html>

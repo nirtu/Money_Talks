@@ -6,28 +6,25 @@
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="36" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="489" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="291" fromTop="9" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="1304" fromTop="21" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:AccountDbContext_Money_Talks/f:Models_.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Web.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:packages.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="439" fromTop="17" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:About.cshtml" caret="224" fromTop="11" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="529" fromTop="5" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="289" fromTop="6" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1963" fromTop="60" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="712" fromTop="20" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="130" fromTop="2" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="197" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="283" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="546" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="477" fromTop="8" />
     </RecentFiles>
     <RecentEdits>
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="19" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="3" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="1" />
@@ -38,16 +35,16 @@
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1739" fromTop="11" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="186" fromTop="11" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="388" fromTop="19" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2796" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2748" fromTop="19" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2786" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2738" fromTop="19" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1177" fromTop="14" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="999" fromTop="12" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="325" fromTop="11" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="191" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2126" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2588" fromTop="3" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1836" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2021" fromTop="16" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2116" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2578" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1831" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2011" fromTop="16" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="697" fromTop="10" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="918" fromTop="22" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="883" fromTop="14" />
@@ -55,6 +52,9 @@
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="676" fromTop="14" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="798" fromTop="18" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="580" fromTop="5" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="324" fromTop="10" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="479" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="618" fromTop="8" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
