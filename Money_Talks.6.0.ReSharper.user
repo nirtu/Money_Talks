@@ -3,58 +3,59 @@
     <RecentFiles>
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:Web.config" caret="312" fromTop="5" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Global.asax.cs" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="36" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="489" fromTop="12" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="291" fromTop="9" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="1304" fromTop="21" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:AccountDbContext_Money_Talks/f:Models_.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Web.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:packages.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="439" fromTop="17" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:About.cshtml" caret="224" fromTop="11" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="529" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="289" fromTop="6" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="197" fromTop="9" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="283" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="546" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="477" fromTop="8" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="671" fromTop="15" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="472" fromTop="1" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="724" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="209" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1411" fromTop="41" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="865" fromTop="2" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1307" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1321" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:AccountDbContext_Money_Talks/f:Models_.cs" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="1147" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="3" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="105" fromTop="1" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="543" fromTop="20" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="289" fromTop="6" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="75" fromTop="1" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1162" fromTop="15" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1739" fromTop="11" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="186" fromTop="11" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="388" fromTop="19" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2786" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2738" fromTop="19" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1177" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="999" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="325" fromTop="11" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="191" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2116" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2578" fromTop="3" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="1831" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="2011" fromTop="16" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="697" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="918" fromTop="22" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="883" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="771" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="676" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="798" fromTop="18" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="580" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="324" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="479" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="618" fromTop="8" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1504" fromTop="23" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1504" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1526" fromTop="23" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="100" fromTop="13" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="865" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="4585" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="5879" fromTop="23" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="5847" fromTop="20" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="5817" fromTop="20" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="4736" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="4577" fromTop="10" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1643" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="4542" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="3445" fromTop="16" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2964" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2178" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2606" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2693" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="3219" fromTop="18" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="497" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1277" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1321" fromTop="7" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1504" fromTop="16" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1307" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="646" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="935" fromTop="10" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1218" fromTop="18" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="368" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1494" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:Account.cs" caret="1147" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -84,7 +85,7 @@
       <Item value="BalanceAccountInitializer" priority="29" />
       <Item value="decimal" priority="30" />
       <Item value="void" priority="31" />
-      <Item value="if" priority="287" />
+      <Item value="if" priority="319" />
       <Item value="foreach" priority="90" />
       <Item value="DbContext`0" priority="31" />
       <Item value="sum" priority="159" />
@@ -105,7 +106,7 @@
       <Item value="l" priority="63" />
       <Item value="ac" priority="95" />
       <Item value="Length" priority="108" />
-      <Item value="else" priority="63" />
+      <Item value="else" priority="95" />
       <Item value="modelItem" priority="26" />
       <Item value="model" priority="29" />
       <Item value="bal" priority="127" />
@@ -115,6 +116,8 @@
       <Item value="currAcc" priority="63" />
       <Item value="acc" priority="31" />
       <Item value="s" priority="31" />
+      <Item value="Required" priority="26" />
+      <Item value="CreateDatabaseIfNotExists" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Money_Talks.Models.AccountDbContext">
       <Item value="Database" priority="76" />
@@ -137,6 +140,8 @@
       <Item value="DateCreated" priority="22" />
       <Item value="Category" priority="274" />
       <Item value="Transaction" priority="164" />
+      <Item value="Amount" priority="223" />
+      <Item value="TransactionType" priority="77" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.DateTime">
       <Item value="Equals`0" priority="22" />
@@ -154,8 +159,8 @@
       <Item value="ToArray`1" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="HtmlCodeCompletionContext">
-      <Item value="br" priority="30" />
-      <Item value="p" priority="17" />
+      <Item value="br" priority="48" />
+      <Item value="p" priority="23" />
       <Item value="font" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Database">
@@ -166,6 +171,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="ElementAt`1" priority="26" />
+      <Item value="Add`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="RazorTransitionCompletionContext">
       <Item value="model" priority="9" />
@@ -173,6 +179,12 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="document" priority="10" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

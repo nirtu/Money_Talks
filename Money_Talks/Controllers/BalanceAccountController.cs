@@ -25,8 +25,8 @@ namespace Money_Talks.Controllers
 
         public ViewResult Details(int id)
         {
-            Account account = db.Accounts.Find(id);
-            return View(account);
+            Transaction transaction = db.Accounts.Find(id);
+            return View();
         }
 
         //
@@ -41,23 +41,23 @@ namespace Money_Talks.Controllers
         // POST: /Account/Create
 
         [HttpPost]
-        public ActionResult Create(Account account)
+        public ActionResult Create(Transaction transaction)
         {
             if (ModelState.IsValid)
             {
-                db.Accounts.Add(account);
+                db.Accounts.Add(transaction);
 
                 foreach (var acc in db.Accounts)
                 {
                     if (acc != null)
-                        account.Balance += acc.Amount;
+                        transaction.Balance += acc.Amount;
                 }
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(account);
+            return View(transaction);
         }
 
         //
@@ -65,31 +65,31 @@ namespace Money_Talks.Controllers
 
         public ActionResult Edit(int id)
         {
-            Account account = db.Accounts.Find(id);
-            return View(account);
+            Transaction transaction = db.Accounts.Find(id);
+            return View(transaction);
         }
 
         //
         // POST: /Account/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Account account)
+        public ActionResult Edit(Transaction transaction)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(account).State = EntityState.Modified;
+                db.Entry(transaction).State = EntityState.Modified;
 
                 foreach (var acc in db.Accounts)
                 {
                     if (acc != null)
-                        account.Balance += acc.Amount;
+                        transaction.Balance += acc.Amount;
                 }
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(account);
+            return View(transaction);
         }
 
         //
@@ -97,8 +97,8 @@ namespace Money_Talks.Controllers
 
         public ActionResult Delete(int id)
         {
-            Account account = db.Accounts.Find(id);
-            return View(account);
+            Transaction transaction = db.Accounts.Find(id);
+            return View(transaction);
         }
 
         public ActionResult Pop()
@@ -113,13 +113,13 @@ namespace Money_Talks.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Account account = db.Accounts.Find(id);
-            db.Accounts.Remove(account);
+            Transaction transaction = db.Accounts.Find(id);
+            db.Accounts.Remove(transaction);
 
             foreach (var acc in db.Accounts)
             {
                 if(acc != null)
-                    account.Balance += acc.Balance;
+                    transaction.Balance += acc.Balance;
             }
 
             db.SaveChanges();

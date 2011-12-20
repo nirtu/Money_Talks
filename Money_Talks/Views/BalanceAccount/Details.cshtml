@@ -1,4 +1,4 @@
-﻿@model Money_Talks.Models.Account
+﻿@model Money_Talks.Models.Transaction
 
 @{
     ViewBag.Title = "Details";
@@ -7,11 +7,16 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Account</legend>
+    <legend>Transaction</legend>
 
-    <div class="display-label">Transaction</div>
+    <div class="display-label">Amount</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Transaction)
+        @Html.DisplayFor(model => model.Amount)
+    </div>
+
+    <div class="display-label">Transaction Type</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransactionType)
     </div>
 
     <div class="display-label">Date Created</div>
@@ -25,6 +30,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.TransactionId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

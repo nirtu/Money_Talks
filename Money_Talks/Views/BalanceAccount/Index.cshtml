@@ -1,5 +1,5 @@
 ﻿@using Money_Talks.Models
-@model IEnumerable<Money_Talks.Models.Account>
+@model IEnumerable<Money_Talks.Models.Transaction>
 
 @{
     ViewBag.Title = "Index";
@@ -8,7 +8,7 @@
 @{
   long bal = 0;
   
-  Account[] arr = Model.ToArray();
+  Transaction[] arr = Model.ToArray();
   if (arr.Length != 0)
   {
       //bal = a[a.Length - 1].Balance;
