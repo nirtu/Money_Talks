@@ -8,9 +8,9 @@ namespace Money_Talks.Models
     {
         protected override void Seed(AccountDbContext context)
         {
-            var accounts = new List<Transaction>
+            var accounts = new List<TransactionModel>
             {
-                new Transaction
+                new TransactionModel
                 {
                     TransactionId = 1,
                     Amount = 1000,
@@ -18,7 +18,7 @@ namespace Money_Talks.Models
                     Category = "Cloths",
                     DateCreated = DateTime.Now
                 },
-                new Transaction
+                new TransactionModel
                 {
                     TransactionId = 2,
                         Amount = 200,
@@ -26,7 +26,7 @@ namespace Money_Talks.Models
                     Category = "Food",
                     DateCreated = DateTime.Now
                 },
-                new Transaction
+                new TransactionModel
                 {
                     TransactionId = 3,
                     Amount = 500,
@@ -34,7 +34,7 @@ namespace Money_Talks.Models
                     Category = "Bills",
                     DateCreated = DateTime.Now
                 },
-                new Transaction
+                new TransactionModel
                 {
                     TransactionId = 4,
                     Amount = 100,
@@ -43,7 +43,7 @@ namespace Money_Talks.Models
                     DateCreated = DateTime.Now
                 }
             };
-            accounts.ForEach(d => context.Accounts.Add(d));
+            accounts.ForEach(d => context.Transactions.Add(d));
         }
     }
 }

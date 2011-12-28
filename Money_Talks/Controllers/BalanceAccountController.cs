@@ -17,7 +17,7 @@ namespace Money_Talks.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Accounts.ToList());
+            return View(db.Transactions.ToList());
         }
 
         //
@@ -25,7 +25,7 @@ namespace Money_Talks.Controllers
 
         public ViewResult Details(int id)
         {
-            Transaction transaction = db.Accounts.Find(id);
+            TransactionModel transaction = db.Transactions.Find(id);
             return View();
         }
 
@@ -41,13 +41,13 @@ namespace Money_Talks.Controllers
         // POST: /Account/Create
 
         [HttpPost]
-        public ActionResult Create(Transaction transaction)
+        public ActionResult Create(TransactionModel transaction)
         {
             if (ModelState.IsValid)
             {
-                db.Accounts.Add(transaction);
+                db.Transactions.Add(transaction);
 
-                foreach (var acc in db.Accounts)
+                foreach (var acc in db.Transactions)
                 {
                     if (acc != null)
                         transaction.Balance += acc.Amount;
@@ -65,7 +65,7 @@ namespace Money_Talks.Controllers
 
         public ActionResult Edit(int id)
         {
-            Transaction transaction = db.Accounts.Find(id);
+            TransactionModel transaction = db.Transactions.Find(id);
             return View(transaction);
         }
 
@@ -73,13 +73,13 @@ namespace Money_Talks.Controllers
         // POST: /Account/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Transaction transaction)
+        public ActionResult Edit(TransactionModel transaction)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(transaction).State = EntityState.Modified;
 
-                foreach (var acc in db.Accounts)
+                foreach (var acc in db.Transactions)
                 {
                     if (acc != null)
                         transaction.Balance += acc.Amount;
@@ -97,7 +97,7 @@ namespace Money_Talks.Controllers
 
         public ActionResult Delete(int id)
         {
-            Transaction transaction = db.Accounts.Find(id);
+            TransactionModel transaction = db.Transactions.Find(id);
             return View(transaction);
         }
 
@@ -113,10 +113,10 @@ namespace Money_Talks.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Transaction transaction = db.Accounts.Find(id);
-            db.Accounts.Remove(transaction);
+            TransactionModel transaction = db.Transactions.Find(id);
+            db.Transactions.Remove(transaction);
 
-            foreach (var acc in db.Accounts)
+            foreach (var acc in db.Transactions)
             {
                 if(acc != null)
                     transaction.Balance += acc.Balance;

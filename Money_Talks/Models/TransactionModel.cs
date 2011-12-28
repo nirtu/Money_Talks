@@ -5,7 +5,8 @@ using System.Data.Entity;
 
 namespace Money_Talks.Models
 {
-    public class Transaction
+    
+    public class TransactionModel
     {
         [Key]
         public int TransactionId { get; set; }
@@ -30,11 +31,13 @@ namespace Money_Talks.Models
         [DisplayName("Balance")]
         [DisplayFormat(DataFormatString = "{0:d}")]
         public long Balance { get; set; }
+
+        [DisplayName("Username")]
+        public long Username { get; set; }
     }
 
     public class AccountDbContext : DbContext
     {
-        public DbSet<Transaction> Accounts { get; set; }
-        
+        public DbSet<TransactionModel> Transactions { get; set; }   
     }
 }

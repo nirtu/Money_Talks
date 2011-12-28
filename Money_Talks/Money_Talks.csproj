@@ -70,7 +70,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\TransactionModel.cs" />
     <Compile Include="Models\BalanceAccountInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
