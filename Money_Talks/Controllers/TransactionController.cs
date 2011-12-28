@@ -5,7 +5,7 @@ using Money_Talks.Models;
 
 namespace Money_Talks.Controllers
 {
-    public class BalanceAccountController : Controller
+    public class TransactionController : Controller
     {
         /// <summary>
         /// 
