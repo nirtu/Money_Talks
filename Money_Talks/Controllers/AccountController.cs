@@ -34,7 +34,7 @@ namespace Money_Talks.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Transaction");
                     }
                 }
                 else

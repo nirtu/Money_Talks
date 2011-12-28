@@ -11,6 +11,8 @@ namespace Money_Talks.Models
         [Key]
         public int TransactionId { get; set; }
 
+        public string Username { get; set; }
+
         [DisplayName("Amount")]
         [Required(ErrorMessage = "Amount is required")]
         public long Amount { get; set; }
@@ -31,9 +33,6 @@ namespace Money_Talks.Models
         [DisplayName("Balance")]
         [DisplayFormat(DataFormatString = "{0:d}")]
         public long Balance { get; set; }
-
-        [DisplayName("Username")]
-        public long Username { get; set; }
     }
 
     public class AccountDbContext : DbContext

@@ -71,7 +71,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\TransactionModel.cs" />
-    <Compile Include="Models\BalanceAccountInitializer.cs" />
+    <Compile Include="Models\TransactionInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

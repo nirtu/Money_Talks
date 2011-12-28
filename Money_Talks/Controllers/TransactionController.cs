@@ -43,14 +43,16 @@ namespace Money_Talks.Controllers
         [HttpPost]
         public ActionResult Create(TransactionModel transaction)
         {
+            transaction.Username = User.Identity.Name;
+
             if (ModelState.IsValid)
             {
                 db.Transactions.Add(transaction);
 
-                foreach (var acc in db.Transactions)
+                foreach (var trans in db.Transactions)
                 {
-                    if (acc != null)
-                        transaction.Balance += acc.Amount;
+                    if (trans != null)
+                        transaction.Balance += trans.Amount;
                 }
 
                 db.SaveChanges();
