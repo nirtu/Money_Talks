@@ -10,9 +10,14 @@ namespace Money_Talks.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
-            return View();
+            if(Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Transaction");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ActionResult About()

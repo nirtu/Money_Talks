@@ -2,61 +2,53 @@
   <RecentFiles>
     <RecentFiles>
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:Web.config" caret="312" fromTop="5" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Global.asax.cs" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Web.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:packages.config" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="529" fromTop="5" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Index.cshtml" caret="293" fromTop="6" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:Error.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:AccountDbContext_Money_Talks/f:Models_.cs" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="679" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1552" fromTop="21" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:About.cshtml" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:LogOn.cshtml" caret="432" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="1856" fromTop="51" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="1094" fromTop="37" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:TransactionController.cs" caret="1435" fromTop="18" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Transaction/f:Index.cshtml" caret="86" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_LogOnPartial.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="74" fromTop="4" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Transaction/f:About.cshtml" caret="0" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="421" fromTop="14" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:LogOn.cshtml" caret="69" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="504" fromTop="4" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="1079" fromTop="15" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/f:Global.asax.cs" caret="292" fromTop="8" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:Register.cshtml" caret="0" fromTop="0" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:AccountModels.cs" caret="1096" fromTop="13" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="1026" fromTop="34" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="1125" fromTop="37" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="649" fromTop="28" />
     </RecentFiles>
     <RecentEdits>
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2973" fromTop="11" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2187" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2615" fromTop="14" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="2702" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="3228" fromTop="18" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="515" fromTop="9" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1295" fromTop="11" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="1339" fromTop="7" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1513" fromTop="16" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="1316" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="664" fromTop="17" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="962" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1254" fromTop="18" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="377" fromTop="12" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:BalanceAccountInitializer.cs" caret="1552" fromTop="21" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:BalanceAccountController.cs" caret="677" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="279" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="142" fromTop="6" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="838" fromTop="17" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="192" fromTop="8" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="192" fromTop="8" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="1102" fromTop="14" />
       <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionModel.cs" caret="1246" fromTop="19" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="81" fromTop="1" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Index.cshtml" caret="168" fromTop="10" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Edit.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Create.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Delete.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Details.cshtml" caret="42" fromTop="0" />
-      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:BalanceAccount/f:Pop.cshtml" caret="42" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_LogOnPartial.cshtml" caret="31" fromTop="1" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:AccountController.cs" caret="1124" fromTop="7" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="140" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="316" fromTop="0" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="502" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="866" fromTop="16" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="1181" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="1519" fromTop="21" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Models/f:TransactionInitializer.cs" caret="1856" fromTop="18" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:TransactionController.cs" caret="1027" fromTop="6" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_Layout.cshtml" caret="457" fromTop="12" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="259" fromTop="9" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Shared/f:_LogOnPartial.cshtml" caret="232" fromTop="8" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Account/f:LogOn.cshtml" caret="69" fromTop="3" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Transaction/f:Index.cshtml" caret="122" fromTop="4" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Transaction/f:Index.cshtml" caret="1641" fromTop="7" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Views/d:Home/f:Index.cshtml" caret="74" fromTop="4" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="467" fromTop="17" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="373" fromTop="11" />
+      <File id="0B597237-B1BF-43FC-BF1E-9A840A0C6873/d:Controllers/f:HomeController.cs" caret="468" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -107,7 +99,7 @@
       <Item value="l" priority="63" />
       <Item value="ac" priority="95" />
       <Item value="Length" priority="108" />
-      <Item value="else" priority="95" />
+      <Item value="else" priority="127" />
       <Item value="modelItem" priority="26" />
       <Item value="model" priority="29" />
       <Item value="bal" priority="127" />
@@ -124,6 +116,9 @@
       <Item value="Data" priority="53" />
       <Item value="SqlClient" priority="53" />
       <Item value="SqlConnection`0" priority="31" />
+      <Item value="Transaction" priority="32" />
+      <Item value="Username" priority="32" />
+      <Item value="User" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Money_Talks.Models.AccountDbContext">
       <Item value="Database" priority="76" />
@@ -195,6 +190,9 @@
     <ItemStatistics item="Qualified:Money_Talks.Models.Transaction">
       <Item value="TransactionType" priority="22" />
       <Item value="Amount" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Principal.IPrincipal">
+      <Item value="Identity" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
