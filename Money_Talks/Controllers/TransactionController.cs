@@ -26,7 +26,7 @@ namespace Money_Talks.Controllers
         public ViewResult Details(int id)
         {
             TransactionModel transaction = db.Transactions.Find(id);
-            return View();
+            return View(transaction);
         }
 
         //
