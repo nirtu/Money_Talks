@@ -47,6 +47,7 @@ namespace Money_Talks.Controllers
 
             if (ModelState.IsValid)
             {
+                
                 db.Transactions.Add(transaction);
 
                 foreach (var trans in db.Transactions)
