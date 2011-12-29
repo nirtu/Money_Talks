@@ -1,0 +1,35 @@
+﻿@model Money_Talks.Models.Rules
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Rules</legend>
+
+    <div class="display-label">RuleBorder</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RuleBorder)
+    </div>
+
+    <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+
+    <div class="display-label">Creation Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+    @*
+    <div class="display-label">UserId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>*@
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RuleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
