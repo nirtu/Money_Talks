@@ -74,6 +74,7 @@
     <Compile Include="Models\Rules.cs" />
     <Compile Include="Models\TransactionModel.cs" />
     <Compile Include="Models\TransactionInitializer.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

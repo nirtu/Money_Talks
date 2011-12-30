@@ -7,7 +7,7 @@ namespace Money_Talks.Controllers
 {
     public class AccountController : Controller
     {
-
+        private UserDbContext userDbContext = new UserDbContext();
         //
         // GET: /Account/LogOn
 
@@ -79,6 +79,14 @@ namespace Money_Talks.Controllers
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
+                    userDbContext.UsersDB.Add(new UserModel(model.UserName,
+                                                            model.Password,
+                                                            model.FirstName,
+                                                            model.LastName,
+                                                            model.Email,
+                                                            0));
+                    userDbContext.SaveChanges();
+
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
