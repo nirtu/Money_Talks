@@ -1,9 +1,14 @@
-﻿@if(Request.IsAuthenticated) 
-{
-    <text>Welcome <strong>@User.Identity.Name</strong>!
-    [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
+﻿@using Money_Talks.Models
+@{
+    UserDbContext usersDb = new UserDbContext();
+    var user = from u in usersDb.UsersDB
+               where u.Username.Equals(User.Identity.Name)
+               select u;
+    var userModel = user.ToArray();
+
+    if (Request.IsAuthenticated)
+    {
+        <text>Welcome <strong>@userModel[0].FirstName @userModel[0].LastName</strong>!
+            [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
+    }
 }
-@*else 
-{
-    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
-}*@

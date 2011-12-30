@@ -5,46 +5,24 @@
     ViewBag.Title = "Money Talks";
 }
 
-@{
-  long bal = 0;
-  
-  TransactionModel[] arr = Model.ToArray();
-  if (arr.Length != 0)
-  {
-      foreach(var currentAccount in arr)
-      {
-          if(currentAccount != null)
-          {
-              if(currentAccount.TransactionType.Equals("Income"))
-              {
-                  bal += currentAccount.Amount; 
-              }
-              else
-              {
-                  bal -= currentAccount.Amount;
-              }
-          }    
-      }
-  }
-}
 
 <p>
     @Html.ActionLink("Test", "Pop")
 </p>
 <p>
     <font size="3" face="arial" color="green">
-        Current Balance: @bal
+        Current Balance: @ViewBag.balance
     </font>
     
     @{
-        if(bal == 0)
+        if (ViewBag.balance == 0)
         {
             <br/> <br/>
             <font size="4" face="arial" color="green">
                 Your balance is stable
             </font>
         }
-        else if (bal < 0)
+        else if (ViewBag.balance < 0)
         {
             <br/> <br/>
             <font size="4" face="arial" color="red">

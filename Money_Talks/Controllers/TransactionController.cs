@@ -10,14 +10,20 @@ namespace Money_Talks.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private AccountDbContext db = new AccountDbContext();
+        private AccountDbContext transactionsDb = new AccountDbContext();
+        private UserDbContext usersDb = new UserDbContext();
         
         //
         // GET: /Account/
 
         public ViewResult Index()
         {
-            return View(db.Transactions.ToList());
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            ViewBag.balance = userModel[0].Balance;
+            return View(transactionsDb.Transactions.ToList());      //Need to change!!!
         }
 
         //
@@ -25,7 +31,7 @@ namespace Money_Talks.Controllers
 
         public ViewResult Details(int id)
         {
-            TransactionModel transaction = db.Transactions.Find(id);
+            TransactionModel transaction = transactionsDb.Transactions.Find(id);
             return View(transaction);
         }
 
@@ -45,18 +51,21 @@ namespace Money_Talks.Controllers
         {
             transaction.Username = User.Identity.Name;
 
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            if (transaction.TransactionType.Equals("Income"))
+                userModel[0].Balance += transaction.Amount;
+            else
+                userModel[0].Balance -= transaction.Amount;
+            usersDb.SaveChanges();
+
             if (ModelState.IsValid)
             {
                 
-                db.Transactions.Add(transaction);
-
-                foreach (var trans in db.Transactions)
-                {
-                    if (trans != null)
-                        transaction.Balance += trans.Amount;
-                }
-
-                db.SaveChanges();
+                transactionsDb.Transactions.Add(transaction);
+                transactionsDb.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -68,7 +77,19 @@ namespace Money_Talks.Controllers
 
         public ActionResult Edit(int id)
         {
-            TransactionModel transaction = db.Transactions.Find(id);
+            TransactionModel transaction = transactionsDb.Transactions.Find(id);
+            
+            //Decrese old transaction amount from balance
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            if(transaction.TransactionType.Equals("Income"))
+                userModel[0].Balance -= transaction.Amount;
+            else
+                userModel[0].Balance += transaction.Amount;
+            usersDb.SaveChanges();
+
             return View(transaction);
         }
 
@@ -80,15 +101,20 @@ namespace Money_Talks.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(transaction).State = EntityState.Modified;
+                transaction.Username = User.Identity.Name;
+                transactionsDb.Entry(transaction).State = EntityState.Modified;
 
-                foreach (var acc in db.Transactions)
-                {
-                    if (acc != null)
-                        transaction.Balance += acc.Amount;
-                }
+                var user = from u in usersDb.UsersDB
+                           where u.Username.Equals(User.Identity.Name)
+                           select u;
+                var userModel = user.ToArray();
+                if (transaction.TransactionType.Equals("Income"))
+                    userModel[0].Balance += transaction.Amount;
+                else
+                    userModel[0].Balance -= transaction.Amount;
+                usersDb.SaveChanges();
 
-                db.SaveChanges();
+                transactionsDb.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -100,7 +126,19 @@ namespace Money_Talks.Controllers
 
         public ActionResult Delete(int id)
         {
-            TransactionModel transaction = db.Transactions.Find(id);
+            TransactionModel transaction = transactionsDb.Transactions.Find(id);
+
+            //Decrese transaction amount from balance
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            if (transaction.TransactionType.Equals("Income"))
+                userModel[0].Balance -= transaction.Amount;
+            else
+                userModel[0].Balance += transaction.Amount;
+            usersDb.SaveChanges();
+
             return View(transaction);
         }
 
@@ -116,16 +154,10 @@ namespace Money_Talks.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            TransactionModel transaction = db.Transactions.Find(id);
-            db.Transactions.Remove(transaction);
-
-            foreach (var acc in db.Transactions)
-            {
-                if(acc != null)
-                    transaction.Balance += acc.Balance;
-            }
-
-            db.SaveChanges();
+            TransactionModel transaction = transactionsDb.Transactions.Find(id);
+            transactionsDb.Transactions.Remove(transaction);
+            
+            transactionsDb.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -136,7 +168,7 @@ namespace Money_Talks.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            transactionsDb.Dispose();
             base.Dispose(disposing);
         }
     }

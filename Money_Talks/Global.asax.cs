@@ -30,7 +30,7 @@ namespace Money_Talks
 
         protected void Application_Start()
         {
-            Database.SetInitializer(new TransactionInitializer());
+            //Database.SetInitializer(new TransactionInitializer());
 
             AreaRegistration.RegisterAllAreas();
 

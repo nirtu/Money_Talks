@@ -18,6 +18,8 @@ namespace Money_Talks.Models
         public string Email { get; set; }
         public double Balance { get; set; }
 
+        public UserModel(){}
+
         public UserModel( string Username, string Password, string FirstName, string LastName, string Email, int Balance)
         {
             this.Username = Username;

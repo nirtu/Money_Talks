@@ -29,10 +29,6 @@ namespace Money_Talks.Models
         [Required(ErrorMessage = "Date is required")]
         [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime DateCreated { get; set; }
-
-        [DisplayName("Balance")]
-        [DisplayFormat(DataFormatString = "{0:d}")]
-        public long Balance { get; set; }
     }
 
     public class AccountDbContext : DbContext
