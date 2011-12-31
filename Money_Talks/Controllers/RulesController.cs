@@ -127,12 +127,17 @@ namespace Money_Talks.Controllers
             {
                 var transactions = from t in adb.Transactions
                                    where t.Username.Equals(User.Identity.Name) & t.Category.Equals(categoryAndRuleBorder.Category)
-                                   select t.Amount;
+                                   select t;
 
                 int sumAllAmount = 0;
 
-                foreach (int x in transactions)
-                    sumAllAmount += x;
+                foreach (var x in transactions)
+                {
+                    if (x.Category.Equals("Income"))
+                        sumAllAmount -= (int)x.Amount;
+                    else
+                        sumAllAmount += (int)x.Amount;
+                }
 
                 if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
                 {
