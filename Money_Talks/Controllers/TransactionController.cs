@@ -7,9 +7,6 @@ namespace Money_Talks.Controllers
 {
     public class TransactionController : Controller
     {
-        /// <summary>
-        /// 
-        /// </summary>
         private AccountDbContext transactionsDb = new AccountDbContext();
         private UserDbContext usersDb = new UserDbContext();
         
@@ -75,7 +72,6 @@ namespace Money_Talks.Controllers
                 //return RedirectToAction("runRules", "Rules");
                 return RedirectToAction("Index");
             }
-            
             return View(transaction);
         }
 
@@ -125,7 +121,6 @@ namespace Money_Talks.Controllers
                 
                 return RedirectToAction("Index");
             }
-
             return View(transaction);
         }
 
@@ -135,7 +130,6 @@ namespace Money_Talks.Controllers
         public ActionResult Delete(int id)
         {
             TransactionModel transaction = transactionsDb.Transactions.Find(id);
-
             return View(transaction);
         }
 
