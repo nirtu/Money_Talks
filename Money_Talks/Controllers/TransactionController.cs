@@ -66,9 +66,10 @@ namespace Money_Talks.Controllers
                 
                 transactionsDb.Transactions.Add(transaction);
                 transactionsDb.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("runRules", "Rules");
+                //return RedirectToAction("Index");
             }
-
+            
             return View(transaction);
         }
 
