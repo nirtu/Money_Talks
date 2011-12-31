@@ -12,23 +12,18 @@ namespace Money_Talks.Controllers
     public class RulesController : Controller
     {
         private RulesDbContext db = new RulesDbContext();
+        private AccountDbContext adb = new AccountDbContext();
 
         //
         // GET: /Rules/
 
         public ViewResult Index()
         {
-            Rules firstRule = new Rules
-            {
-                RuleId = 1,
-                UserId = 1, //need to fix it -> must be the current user 
-                RuleBorder = 5000, // must be dynamic -> current balance of the current user
-                DateCreated = DateTime.Now,
-                Category = "*",
-            };
+            var rls = from r in db.Rules
+                      where r.username.Equals(User.Identity.Name)
+                      select r;
 
-            db.Rules.Add(firstRule);
-            return View(db.Rules.ToList());
+            return View(rls);
         }
 
         //
@@ -58,6 +53,7 @@ namespace Money_Talks.Controllers
             {
                 rules.DateCreated = DateTime.Now;
                 rules.UserId = 1; // need to dynamic -> fill with the current user that asking to create RULE
+                rules.username = User.Identity.Name;
                 db.Rules.Add(rules);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -83,6 +79,7 @@ namespace Money_Talks.Controllers
         {
             if (ModelState.IsValid)
             {
+                rules.username = User.Identity.Name;
                 rules.DateCreated = DateTime.Now;
                 db.Entry(rules).State = EntityState.Modified;
                 db.SaveChanges();
@@ -116,6 +113,45 @@ namespace Money_Talks.Controllers
         {
             db.Dispose();
             base.Dispose(disposing);
+        }
+
+        public ActionResult runRules()
+        {
+
+            List<faultsContainer> fList = new List<faultsContainer>();
+            var categoryAndRuleBorderSet = from r in db.Rules
+                                           where r.username.Equals(User.Identity.Name)
+                                           select r;
+
+            foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
+            {
+                var transactions = from t in adb.Transactions
+                                   where t.Username.Equals(User.Identity.Name) & t.Category.Equals(categoryAndRuleBorder.Category)
+                                   select t.Amount;
+
+                int sumAllAmount = 0;
+
+                foreach (int x in transactions)
+                    sumAllAmount += x;
+
+                if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
+                {
+                    //
+                    // add this to array that contains all faults 
+                    //
+
+                    fList.Add(new faultsContainer
+                    {
+                        deviation = (sumAllAmount - categoryAndRuleBorder.RuleBorder),
+                        category = categoryAndRuleBorder.Category
+                    });
+                }
+
+
+                sumAllAmount = 0;
+            }
+            ViewBag.faultList = fList;
+            return View("runRules");
         }
     }
 }

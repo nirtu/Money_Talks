@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "runRules";
+}
+
+
+<h2>Your Rules Results </h2>
+
+@foreach (var item in ViewBag.faultList)
+{
+    <h3>You Broke the '@item.category' Rule with a @item.deviation NIS Deviation, Don't Waste My Time And Be Aware To Your Expenses... </h3>
+}

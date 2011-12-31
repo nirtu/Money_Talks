@@ -26,15 +26,24 @@ namespace Money_Talks.Models
         [DisplayName("Date Created")]
         [Required(ErrorMessage = "Date is required")]
         [DisplayFormat(DataFormatString = "{0:d}")]
-        public DateTime DateCreated { get; set; }  //{ get { return DateCreated; } set { DateCreated = DateTime.Now; } }
+        public DateTime DateCreated { get; set; }
 
         //[ForeignKey(need to fill user ID for this attribute)] 
         public int UserId { get; set; }
+
+        public string username { get; set; }
 
     }
 
     public class RulesDbContext : DbContext
     {
         public DbSet<Rules> Rules { get; set; }
+    }
+
+    public class faultsContainer
+    {
+        public int deviation { get; set; }
+
+        public string category { get; set; }
     }
 }
