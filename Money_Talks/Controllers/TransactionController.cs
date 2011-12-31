@@ -49,23 +49,23 @@ namespace Money_Talks.Controllers
         [HttpPost]
         public ActionResult Create(TransactionModel transaction)
         {
-            transaction.Username = User.Identity.Name;
-
-            var user = from u in usersDb.UsersDB
-                       where u.Username.Equals(User.Identity.Name)
-                       select u;
-            var userModel = user.ToArray();
-            if (transaction.TransactionType.Equals("Income"))
-                userModel[0].Balance += transaction.Amount;
-            else
-                userModel[0].Balance -= transaction.Amount;
-            usersDb.SaveChanges();
-
             if (ModelState.IsValid)
             {
-                
+                transaction.Username = User.Identity.Name;
                 transactionsDb.Transactions.Add(transaction);
                 transactionsDb.SaveChanges();
+
+                //Update balance
+                var user = from u in usersDb.UsersDB
+                           where u.Username.Equals(User.Identity.Name)
+                           select u;
+                var userModel = user.ToArray();
+                if (transaction.TransactionType.Equals("Income"))
+                    userModel[0].Balance += transaction.Amount;
+                else
+                    userModel[0].Balance -= transaction.Amount;
+                usersDb.SaveChanges();
+
                 return RedirectToAction("runRules", "Rules");
                 //return RedirectToAction("Index");
             }
@@ -104,7 +104,9 @@ namespace Money_Talks.Controllers
             {
                 transaction.Username = User.Identity.Name;
                 transactionsDb.Entry(transaction).State = EntityState.Modified;
+                transactionsDb.SaveChanges();
 
+                //Update balance
                 var user = from u in usersDb.UsersDB
                            where u.Username.Equals(User.Identity.Name)
                            select u;
@@ -114,8 +116,7 @@ namespace Money_Talks.Controllers
                 else
                     userModel[0].Balance -= transaction.Amount;
                 usersDb.SaveChanges();
-
-                transactionsDb.SaveChanges();
+                
                 return RedirectToAction("Index");
             }
 
@@ -129,6 +130,19 @@ namespace Money_Talks.Controllers
         {
             TransactionModel transaction = transactionsDb.Transactions.Find(id);
 
+            return View(transaction);
+        }
+
+        //
+        // POST: /Account/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            TransactionModel transaction = transactionsDb.Transactions.Find(id);
+            transactionsDb.Transactions.Remove(transaction);
+            transactionsDb.SaveChanges();
+
             //Decrese transaction amount from balance
             var user = from u in usersDb.UsersDB
                        where u.Username.Equals(User.Identity.Name)
@@ -140,26 +154,12 @@ namespace Money_Talks.Controllers
                 userModel[0].Balance += transaction.Amount;
             usersDb.SaveChanges();
 
-            return View(transaction);
+            return RedirectToAction("Index");
         }
 
         public ActionResult Pop()
         {
             return View();
-        }
-
-
-        //
-        // POST: /Account/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            TransactionModel transaction = transactionsDb.Transactions.Find(id);
-            transactionsDb.Transactions.Remove(transaction);
-            
-            transactionsDb.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         public ActionResult About()
