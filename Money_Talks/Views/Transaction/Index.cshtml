@@ -56,31 +56,27 @@
         </th>
     </tr>
 
-@foreach (var item in Model.Reverse())
-{
-    if (User.Identity.Name.Equals(item.Username))
+    @foreach (var transaction in Model.Reverse())
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Amount)
+                @Html.DisplayFor(modelItem => transaction.Amount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TransactionType)
+                @Html.DisplayFor(modelItem => transaction.TransactionType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
+                @Html.DisplayFor(modelItem => transaction.DateCreated)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
+                @Html.DisplayFor(modelItem => transaction.Category)
             </td>
         
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.TransactionId}) |
-                @Html.ActionLink("Details", "Details", new {id = item.TransactionId}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.TransactionId})
+                @Html.ActionLink("Edit", "Edit", new { id = transaction.TransactionId }) |
+                @Html.ActionLink("Details", "Details", new { id = transaction.TransactionId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = transaction.TransactionId })
             </td>
         </tr>
     }
-}
-
 </table>

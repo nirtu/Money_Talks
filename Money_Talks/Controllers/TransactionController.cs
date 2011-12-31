@@ -23,7 +23,13 @@ namespace Money_Talks.Controllers
                        select u;
             var userModel = user.ToArray();
             ViewBag.balance = userModel[0].Balance;
-            return View(transactionsDb.Transactions.ToList());      //Need to change!!!
+
+            //Only the appropriate user transactions
+            var userTransactions = from ut in transactionsDb.Transactions
+                                   where ut.Username.Equals(User.Identity.Name)
+                                   select ut;
+            
+            return View(userTransactions);
         }
 
         //
@@ -66,8 +72,8 @@ namespace Money_Talks.Controllers
                     userModel[0].Balance -= transaction.Amount;
                 usersDb.SaveChanges();
 
-                return RedirectToAction("runRules", "Rules");
-                //return RedirectToAction("Index");
+                //return RedirectToAction("runRules", "Rules");
+                return RedirectToAction("Index");
             }
             
             return View(transaction);
