@@ -58,16 +58,7 @@ namespace Money_Talks.Controllers
                 transactionsDb.Transactions.Add(transaction);
                 transactionsDb.SaveChanges();
 
-                //Update balance
-                var user = from u in usersDb.UsersDB
-                           where u.Username.Equals(User.Identity.Name)
-                           select u;
-                var userModel = user.ToArray();
-                if (transaction.TransactionType.Equals("Income"))
-                    userModel[0].Balance += transaction.Amount;
-                else
-                    userModel[0].Balance -= transaction.Amount;
-                usersDb.SaveChanges();
+                UpdateBalanceAfterAddingTransaction(transaction);
 
                 //return RedirectToAction("runRules", "Rules");
                 return RedirectToAction("Index");
@@ -81,18 +72,7 @@ namespace Money_Talks.Controllers
         public ActionResult Edit(int id)
         {
             TransactionModel transaction = transactionsDb.Transactions.Find(id);
-            
-            //Decrese old transaction amount from balance
-            var user = from u in usersDb.UsersDB
-                       where u.Username.Equals(User.Identity.Name)
-                       select u;
-            var userModel = user.ToArray();
-            if(transaction.TransactionType.Equals("Income"))
-                userModel[0].Balance -= transaction.Amount;
-            else
-                userModel[0].Balance += transaction.Amount;
-            usersDb.SaveChanges();
-
+            UpdateBalanceAfterRemovingTransaction(transaction);
             return View(transaction);
         }
 
@@ -108,16 +88,7 @@ namespace Money_Talks.Controllers
                 transactionsDb.Entry(transaction).State = EntityState.Modified;
                 transactionsDb.SaveChanges();
 
-                //Update balance
-                var user = from u in usersDb.UsersDB
-                           where u.Username.Equals(User.Identity.Name)
-                           select u;
-                var userModel = user.ToArray();
-                if (transaction.TransactionType.Equals("Income"))
-                    userModel[0].Balance += transaction.Amount;
-                else
-                    userModel[0].Balance -= transaction.Amount;
-                usersDb.SaveChanges();
+                UpdateBalanceAfterAddingTransaction(transaction);
                 
                 return RedirectToAction("Index");
             }
@@ -143,16 +114,7 @@ namespace Money_Talks.Controllers
             transactionsDb.Transactions.Remove(transaction);
             transactionsDb.SaveChanges();
 
-            //Decrese transaction amount from balance
-            var user = from u in usersDb.UsersDB
-                       where u.Username.Equals(User.Identity.Name)
-                       select u;
-            var userModel = user.ToArray();
-            if (transaction.TransactionType.Equals("Income"))
-                userModel[0].Balance -= transaction.Amount;
-            else
-                userModel[0].Balance += transaction.Amount;
-            usersDb.SaveChanges();
+            UpdateBalanceAfterRemovingTransaction(transaction);
 
             return RedirectToAction("Index");
         }
@@ -171,6 +133,48 @@ namespace Money_Talks.Controllers
         {
             transactionsDb.Dispose();
             base.Dispose(disposing);
+        }
+
+        private void UpdateBalanceAfterAddingTransaction(TransactionModel transaction)
+        {
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            if (transaction.TransactionType.Equals("Income"))
+                userModel[0].Balance += transaction.Amount;
+            else
+                userModel[0].Balance -= transaction.Amount;
+            usersDb.SaveChanges();
+        }
+
+        private void UpdateBalanceAfterRemovingTransaction(TransactionModel transaction)
+        {
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            var userModel = user.ToArray();
+            if (transaction.TransactionType.Equals("Income"))
+                userModel[0].Balance -= transaction.Amount;
+            else
+                userModel[0].Balance += transaction.Amount;
+            usersDb.SaveChanges();
+        }
+
+        //---------------------------------------------------------------------
+
+        private int balanceCheckAdd(int balance, int transactionAmount)
+        {
+            balance += transactionAmount;
+
+            return balance;
+        }
+
+        private int balanceCheckRemove(int balance, int transactionAmount)
+        {
+            balance -= transactionAmount;
+
+            return balance;
         }
     }
 }
