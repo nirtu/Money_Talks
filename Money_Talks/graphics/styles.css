@@ -4,12 +4,12 @@
 }
  
 body {
-font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;
-background-image:url(images/bg.png);
-background-repeat:repeat-x;
-background-color:#ffffff;
-padding:0;
-margin:0;
+    font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;
+    background-image:url(images/bg.png);
+    background-repeat:repeat-x;
+    background-color:#ffffff;
+    padding:0;
+    margin:0;
 }
 
 #container {
@@ -22,7 +22,6 @@ margin:0;
 	height: 600px;	
 }
  
-/* HEADER BACKGROUND IMAGE */
 #header {	
 	background-repeat:no-repeat;
 	background-image: url(images/header_bg.png);
@@ -31,7 +30,6 @@ margin:0;
 	float:left;
 	margin-top: 110px;
 }
-/* HEADER BACKGROUND IMAGE END */
 
 #join {
 	position:absolute;
@@ -62,11 +60,11 @@ margin:0;
 }
 
 .join_button:hover { 
-border: 1px solid rgb(130,130,130); 
-background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
+    border: 1px solid rgb(130,130,130); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
 }
 
-.join_button:active{
+.join_button:active {
 	position:absolute;
 	top:420px;
 	left:434px;
@@ -91,17 +89,17 @@ background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#e
 }
 
 .button:hover { 
-border: 1px solid rgb(130,130,130); 
-background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
+    border: 1px solid rgb(130,130,130); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
 }
 
-.button:active{
-position:relative; /*allow the move*/
-left:2px; /*move the button to the right 1px;*/
-top:2px; /*move the button down 1px;*/
--webkit-box-shadow: #000000 1px 1px 8px;
--moz-box-shadow: #000000 1px 1px 8px;
-box-shadow: #000000 1px 1px 8px;
+.button:active {
+    position:relative; /*allow the move*/
+    left:2px; /*move the button to the right 1px;*/
+    top:2px; /*move the button down 1px;*/
+    -webkit-box-shadow: #000000 1px 1px 8px;
+    -moz-box-shadow: #000000 1px 1px 8px;
+    box-shadow: #000000 1px 1px 8px;
 }
 
 #login {
@@ -115,7 +113,7 @@ box-shadow: #000000 1px 1px 8px;
 	border-radius:18px;
 }
 
-.input{
+.input {
 	/*position:relative;
 	left:13px;
 	top:13px;*/
