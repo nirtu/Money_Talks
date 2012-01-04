@@ -4,12 +4,12 @@ to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
 body {
-    background-color: #5c87b2;
-    font-size: .85em;
-    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-    padding: 0;
-    color: #696969;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    background-image:url(~/graphics/images/banner.png);
+    background-repeat:repeat-x;
+    background-color:#ffffff;
+    padding:0;
+    margin:0;
 }
 
 a:link {
@@ -101,11 +101,12 @@ header h1, #header h1 {
 }
 
 #main {
-    padding: 30px 30px 15px 30px;
-    background-color: #fff;
-    border-radius: 4px 0 0 0;
-    -webkit-border-radius: 4px 0 0 0;
-    -moz-border-radius: 4px 0 0 0;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+background-image:url(images/banner.png);
+background-repeat:repeat-x;
+background-color:#ffffff;
+padding:0;
+margin:0;
 }
 
 footer, 

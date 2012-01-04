@@ -1,17 +1,43 @@
-﻿@*<h2>@ViewBag.Message</h2>*@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Untitled Document</title>
+        <link href="../../graphics/styles.css" rel="stylesheet" type="text/css" />
+    </head>
 
-@{
-    ViewBag.Title = "Money Talks";
-}
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <div id="join"></div>
+            <a class="join_button" href="../Account/LogOn">Join today!</a>   
+            <div id="login">
+                <form action="../Account/LogOn" style="margin:auto; height:250px; width:100%; margin-top:45px">
+                    <table align="center" height="100%" width="100%">
+                        <tr>
+                            <td align="center" valign="middle" colspan="3">
+                                <input type="text" placeholder="Username" class="input" size="25"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle" colspan="3">
+                                <input type="text" placeholder="Password" class="input" size="25"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="144px" align="right">
+                                <input type="submit" style="cursor:pointer" value="Login" class="button" />
+                            </td>     	
+                            <td valign="middle">
+                                <input type="checkbox" style="margin-left:17px; margin-top:5px; cursor:pointer" class="checkbox" />
+                            </td>
+                            <td><div id="remember" style="margin-top:4px; margin-right:10px"></div></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>        
+        </div>
+        <div id="rights">Money Talks © 2012 | About · Terms · Privacy · Advertisers · Careers</div>
+    </body>
+</html>
 
-<div align="center">
-<font size="15">
-<p>When MONEY TALKS,</p>
-<p>Nobody checks the grammar</p>
-</font>
-<font size="10">
-<p>
-    @Html.ActionLink("Login", "LogOn", "Account")
-</p>
-</font>
-</div>

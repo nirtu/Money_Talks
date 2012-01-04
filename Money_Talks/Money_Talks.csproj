@@ -110,6 +110,11 @@
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
+    <Content Include="graphics\images\banner.png" />
+    <Content Include="graphics\images\header_bg.png" />
+    <Content Include="graphics\images\join_img.png" />
+    <Content Include="graphics\index.html" />
+    <Content Include="graphics\styles.css" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />

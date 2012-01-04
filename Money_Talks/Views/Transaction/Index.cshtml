@@ -7,6 +7,12 @@
 
 
 <p>
+    @if (Request.IsAuthenticated)
+    {
+        <text>Welcome![ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
+    }
+</p>
+<p>
     @Html.ActionLink("Test", "Pop")
 </p>
 <p>

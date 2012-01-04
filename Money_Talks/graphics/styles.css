@@ -1,0 +1,176 @@
+* {
+	padding:0;
+	margin:0;
+}
+ 
+body {
+font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;
+background-image:url(images/bg.png);
+background-repeat:repeat-x;
+background-color:#ffffff;
+padding:0;
+margin:0;
+}
+
+#container {
+	padding:0;
+	margin:auto;	
+	background-repeat:no-repeat;
+	background-image: url(images/bg_img.png);
+	background-position:center;	
+	width: 1200px;
+	height: 600px;	
+}
+ 
+/* HEADER BACKGROUND IMAGE */
+#header {	
+	background-repeat:no-repeat;
+	background-image: url(images/header_bg.png);
+	height: 242px;
+	width: 712px;
+	float:left;
+	margin-top: 110px;
+}
+/* HEADER BACKGROUND IMAGE END */
+
+#join {
+	position:absolute;
+	background-repeat:no-repeat;
+	background-image: url(images/join_img.png);
+	height: 60px;
+	width: 250px;
+	float:left;
+	margin-top: 420px;
+	margin-left:130px;
+}
+
+.join_button {
+	position:absolute;
+	top:418px;
+	left:432px;
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+	font-family: daxWide;
+	padding: 10px 19px 10px 19px;
+	border: 1px solid rgb(120,120,120);
+	Border-radius: 9px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f00e), to(#e59f19));
+	-webkit-box-shadow: #000000 2px 2px 10px;
+	-moz-box-shadow: #000000 2px 2px 10px;
+	box-shadow: #000000 2px 2px 10px;
+}
+
+.join_button:hover { 
+border: 1px solid rgb(130,130,130); 
+background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
+}
+
+.join_button:active{
+	position:absolute;
+	top:420px;
+	left:434px;
+	-webkit-box-shadow: #000000 1px 1px 8px;
+	-moz-box-shadow: #000000 1px 1px 8px;
+	box-shadow: #000000 1px 1px 8px;
+}
+
+.button {
+	/*position:relative;*/
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+	font-family: daxWide;
+	padding: 10px 19px 10px 19px;
+	border: 1px solid rgb(120,120,120);
+	Border-radius: 9px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f00e), to(#e59f19));
+	-webkit-box-shadow: #000000 2px 2px 10px;
+	-moz-box-shadow: #000000 2px 2px 10px;
+	box-shadow: #000000 2px 2px 10px;
+}
+
+.button:hover { 
+border: 1px solid rgb(130,130,130); 
+background: -webkit-gradient(linear, left top, left bottom, from(#e9c417), to(#ede113));
+}
+
+.button:active{
+position:relative; /*allow the move*/
+left:2px; /*move the button to the right 1px;*/
+top:2px; /*move the button down 1px;*/
+-webkit-box-shadow: #000000 1px 1px 8px;
+-moz-box-shadow: #000000 1px 1px 8px;
+box-shadow: #000000 1px 1px 8px;
+}
+
+#login {
+	height: 340px;
+	width: 390px;
+	float:right;
+	margin-top:135px;
+	margin-right:28px;
+	-webkit-box-shadow: inset 5px 5px 20px #000000;
+	box-shadow: inset 5px 5px 20px #000000;
+	border-radius:18px;
+}
+
+.input{
+	/*position:relative;
+	left:13px;
+	top:13px;*/
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	font-family: daxWide;
+	padding: 10px 20px 10px 20px;
+	border: 1px solid #000;
+	Border-radius: 9px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fcfde7));
+	-moz-box-shadow: inset 2px 2px 10px #000000;
+	-webkit-box-shadow: inset 2px 2px 10px #000000;
+	box-shadow: inset 2px 2px 10px #000000;
+}
+
+.checkbox {
+	height:30px;
+	width:30px;
+   	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+   	-webkit-appearance: none;
+   	-webkit-border-radius: 0.3em;
+	background-image:url(images/checkbox.png);	
+}
+
+.checkbox:hover {
+	height:30px;
+	width:30px;
+   	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+   	-webkit-appearance: none;
+   	-webkit-border-radius: 0.3em;
+	background-image:url(images/checkbox_hover.png);	
+}
+
+.checkbox:checked {
+	height:30px;
+	width:30px;
+   	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+   	-webkit-appearance: none;
+   	-webkit-border-radius: 0.3em;
+	background-image:url(images/v.png);
+}
+
+#remember {
+	background-repeat:no-repeat;
+	background-image:url(images/remember.png);
+	height:25px;
+	width:130px;
+}
+
+#rights {
+	font-size:11px;
+	height:12px;
+	width:500px;
+	margin-top:6px;
+	margin-left:150px;
+	float:left;
+}

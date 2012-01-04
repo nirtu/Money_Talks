@@ -10,7 +10,7 @@ namespace Money_Talks.Controllers
     {
         public ActionResult Index()
         {
-            if(Request.IsAuthenticated)
+            if (Request.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Transaction");
             }
