@@ -37,9 +37,10 @@
                         </tr>
                     </table>
                 </form>
-            </div>        
+                <div style="padding-left: 70px">@Html.ValidationSummary(true)</div>
+            </div>
         </div>
-        <div id="rights">Money Talks © 2012 | About · Terms · Privacy · Advertisers · Careers</div>
+        <div id="rights">Money Talks © 2012 | @Html.ActionLink("About", "About", "Home") · Terms · Privacy · Advertisers · Careers</div>
     </body>
 </html>
 

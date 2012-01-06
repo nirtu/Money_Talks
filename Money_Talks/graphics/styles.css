@@ -4,7 +4,7 @@
 }
  
 body {
-    font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
     background-image:url(images/bg.png);
     background-repeat:repeat-x;
     background-color:#ffffff;
@@ -172,3 +172,5 @@ body {
 	margin-left:150px;
 	float:left;
 }
+
+
