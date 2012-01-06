@@ -42,9 +42,6 @@ namespace Money_Talks.Controllers
                     ModelState.AddModelError("","Incorrect username or password");
                 }
             }
-            
-            // If we got this far, something failed, redisplay form
-            //return View();
             return View("~/Views/Home/Index.cshtml", model);
         }
 
