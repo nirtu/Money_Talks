@@ -2,9 +2,14 @@
 	padding:0;
 	margin:0;
 }
+
+@font-face {
+    font-family: "daxWide-Light";
+    src: url(fonts/DaxWide-Light.ttf) format("truetype");
+}
  
 body {
-    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-family:Verdana, Arial, Helvetica, sans-serif, daxWide-Light;
     background-image:url(images/bg.png);
     background-repeat:repeat-x;
     background-color:#ffffff;
@@ -42,7 +47,9 @@ body {
 	margin-left:130px;
 }
 
-.join_button {
+.join_button 
+{
+    font-family: daxWide-Light;
 	position:absolute;
 	top:418px;
 	left:432px;
@@ -75,6 +82,7 @@ body {
 
 .button {
 	/*position:relative;*/
+	font-family: daxWide-Light;
 	text-decoration: none;
 	color: black;
 	font-size: 22px;
@@ -113,7 +121,9 @@ body {
 	border-radius:18px;
 }
 
-.input {
+.input 
+{
+    font-family: daxWide-Light;
 	/*position:relative;
 	left:13px;
 	top:13px;*/
@@ -130,7 +140,8 @@ body {
 	box-shadow: inset 2px 2px 10px #000000;
 }
 
-.checkbox {
+.checkbox 
+{
 	height:30px;
 	width:30px;
    	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
