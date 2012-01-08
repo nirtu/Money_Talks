@@ -23,7 +23,20 @@
             @Html.ValidationMessageFor(model => model.RuleBorder)
         </div>
 
-  
+       
+       
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Category)
+        </div>
+        <div>
+            <select name="Category">
+                <option value="" style="display: none">Select</option>
+                @foreach (string category in ViewBag.listOfOutcomesCategories)
+                {    
+                        <option value="@category">@category</option>
+                }
+            </select>
+        </div>
 
       
 
