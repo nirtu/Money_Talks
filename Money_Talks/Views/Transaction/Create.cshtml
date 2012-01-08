@@ -21,13 +21,16 @@
             @Html.EditorFor(model => model.Amount)
             @Html.ValidationMessageFor(model => model.Amount)
         </div>
-
+        
         <div class="editor-label">
             @Html.LabelFor(model => model.TransactionType)
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.TransactionType)
-            @Html.ValidationMessageFor(model => model.TransactionType)
+        <div>
+            <select name="TransactionType">
+                <option value="" style="display: none">Select</option>
+                <option value="Income">Income</option>
+                <option value="Outcome">Outcome</option>
+            </select>
         </div>
 
         <div class="editor-label">
