@@ -40,6 +40,21 @@ namespace Money_Talks.Controllers
 
         public ActionResult Create()
         {
+            var categoriesFromDB =      from r in adb.Transactions
+                                        where r.Username.Equals(User.Identity.Name) & r.TransactionType.Equals("Outcome")
+                                        select r.Category;
+
+        
+            List<string> listOfOutcomesCategories = new List<string>();
+
+            foreach (string x in categoriesFromDB)
+                if (!listOfOutcomesCategories.Contains(x))
+                    listOfOutcomesCategories.Add(x);
+
+
+            ViewBag.listOfOutcomesCategories = listOfOutcomesCategories;
+            int sizeOfList = listOfOutcomesCategories.Count;
+
             return View();
         }
 
