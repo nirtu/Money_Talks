@@ -144,7 +144,8 @@ namespace Money_Talks.Controllers
             if (currentBalance[0] < 0)
                 ViewBag.mainRule = -1;
 
-
+           
+            
             List<faultsContainer> fList = new List<faultsContainer>();
             var categoryAndRuleBorderSet = from r in db.Rules
                                            where r.username.Equals(User.Identity.Name)
@@ -153,7 +154,10 @@ namespace Money_Talks.Controllers
             foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
             {
                 var transactions = from t in adb.Transactions
-                                   where t.Username.Equals(User.Identity.Name) & t.Category.Equals(categoryAndRuleBorder.Category)
+                                   where t.Username.Equals(User.Identity.Name) & 
+                                         t.Category.Equals(categoryAndRuleBorder.Category) & 
+                                         t.DateCreated.Month.Equals(DateTime.Now.Month) &
+                                         t.DateCreated.Year.Equals(DateTime.Now.Year)
                                    select t;
 
                 int sumAllAmount = 0;
