@@ -22,16 +22,13 @@
             @Html.ValidationMessageFor(model => model.Amount)
         </div>
         
-        <div class="editor-label">
-            @Html.LabelFor(model => model.TransactionType)
-        </div>
-        <div>
+        <p>
             <select name="TransactionType">
-                <option value="" style="display: none">Select</option>
+                <option value='' style="display:none">Transaction Type</option>
                 <option value="Income">Income</option>
                 <option value="Outcome">Outcome</option>
             </select>
-        </div>
+        </p>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.DateCreated)
