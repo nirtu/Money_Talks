@@ -134,6 +134,16 @@ namespace Money_Talks.Controllers
         public ActionResult runRules()
         {
 
+            var currBalance = from s in udb.UsersDB
+                              where s.Username.Equals(User.Identity.Name)
+                              select s.Balance;
+
+            var currentBalance = currBalance.ToArray();
+            ViewBag.mainRule = 0;
+
+            if (currentBalance[0] < 0)
+                ViewBag.mainRule = -1;
+
 
             List<faultsContainer> fList = new List<faultsContainer>();
             var categoryAndRuleBorderSet = from r in db.Rules
