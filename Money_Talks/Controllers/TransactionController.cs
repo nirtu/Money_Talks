@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Money_Talks.Models;
+using System;
 
 namespace Money_Talks.Controllers
 {
@@ -18,19 +19,44 @@ namespace Money_Talks.Controllers
             return View();
         }
 
-        public ViewResult Index()
+        //
+        // GET: /Account/
+
+        public ActionResult Index()
         {
             var user = from u in usersDb.UsersDB
                        where u.Username.Equals(User.Identity.Name)
                        select u;
+
             var userModel = user.ToArray();
             ViewBag.balance = userModel[0].Balance;
 
             //Only the appropriate user transactions
             var userTransactions = from ut in transactionsDb.Transactions
-                                   where ut.Username.Equals(User.Identity.Name)
+                                   where ut.Username.Equals(User.Identity.Name) &&
+                                   (ut.DateCreated.Month == DateTime.Now.Month)
+                                   orderby ut.DateCreated
                                    select ut;
-            
+
+            return View(userTransactions);
+        }
+
+        [HttpPost]
+        public ActionResult Index(DateTime startDate, DateTime endDate, string submit)
+        {
+            var userTransactions = from ut in transactionsDb.Transactions
+                                   where ut.Username.Equals(User.Identity.Name) &&
+                                   (ut.DateCreated >= startDate && ut.DateCreated <= endDate)
+                                   orderby ut.DateCreated
+                                   select ut;
+
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+
+            var userModel = user.ToArray();
+            ViewBag.balance = userModel[0].Balance;
+
             return View(userTransactions);
         }
 

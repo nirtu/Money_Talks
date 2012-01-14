@@ -15,6 +15,7 @@ namespace Money_Talks.Models
 
         [DisplayName("Amount")]
         [Required(ErrorMessage = "Amount is required")]
+        [Range(1, Int32.MaxValue, ErrorMessage = "The amount must be bigger than zero!")]
         public long Amount { get; set; }
 
         [DisplayName("Transaction Type")]

@@ -46,6 +46,16 @@
     </font>
 </p>
 
+@* Allows to submit a date range for the transactions *@
+@using (Html.BeginForm())
+{
+    <input type="date" placeholder="Start Date" name="startDate" />
+    <input type="date" placeholder="End Date" name="endDate"  />
+    
+    <input type="submit" name="submit" value="Submit" />
+    //<input type="submit" name="submit" value="View All" />                            
+}
+
 <table>
     <tr>
         <th>
