@@ -13,6 +13,11 @@ namespace Money_Talks.Controllers
         //
         // GET: /Account/
 
+        public ViewResult Tabs()
+        {
+            return View();
+        }
+
         public ViewResult Index()
         {
             var user = from u in usersDb.UsersDB
