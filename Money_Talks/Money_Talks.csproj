@@ -116,6 +116,7 @@
     <Content Include="graphics\images\header_bg.png" />
     <Content Include="graphics\images\join_img.png" />
     <Content Include="graphics\styles.css" />
+    <Content Include="graphics\styles2.css" />
     <Content Include="obj\Debug\Money_Talks.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Money_Talks.dll" />
     <Content Include="obj\Debug\Money_Talks.pdb" />
@@ -213,6 +214,7 @@
     <None Include="graphics\fonts\DaxWide-Medium.ttf" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <Content Include="Views\Transaction\Tabs.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

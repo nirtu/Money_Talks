@@ -12,7 +12,7 @@ namespace Money_Talks.Controllers
         {
             if (Request.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Transaction");
+                return RedirectToAction("Tabs", "Transaction");
             }
             else
             {
