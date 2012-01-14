@@ -11,18 +11,21 @@ namespace Money_Talks.Controllers
 {
     public class RulesController : Controller
     {
-        private RulesDbContext db = new RulesDbContext();
-        private AccountDbContext adb = new AccountDbContext();
-        private UserDbContext udb = new UserDbContext();
+        private static RulesDbContext db = new RulesDbContext();
+        private static AccountDbContext adb = new AccountDbContext();
+        private static UserDbContext udb = new UserDbContext();
 
         //
         // GET: /Rules/
 
+       
         public ViewResult Index()
         {
             var rls = from r in db.Rules
                       where r.username.Equals(User.Identity.Name)
                       select r;
+
+            ViewBag.breakingRules = runRules(this.User.Identity.Name);
 
             return View(rls);
         }
@@ -124,43 +127,109 @@ namespace Money_Talks.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        /*
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
             base.Dispose(disposing);
-        }
+        }*/
 
-        public ActionResult runRules()
+        //public ActionResult runRules()
+        //{
+
+        //    var currBalance = from s in udb.UsersDB
+        //                      where s.Username.Equals(User.Identity.Name)
+        //                      select s.Balance;
+
+        //    var currentBalance = currBalance.ToArray();
+        //    ViewBag.mainRule = 0;
+
+        //    if (currentBalance[0] < 0)
+        //        ViewBag.mainRule = -1;
+
+
+
+        //    List<faultsContainer> fList = new List<faultsContainer>();
+        //    var categoryAndRuleBorderSet = from r in db.Rules
+        //                                   where r.username.Equals(User.Identity.Name)
+        //                                   select r;
+
+        //    foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
+        //    {
+        //        var transactions = from t in adb.Transactions
+        //                           where t.Username.Equals(User.Identity.Name) &
+        //                                 t.Category.Equals(categoryAndRuleBorder.Category) &
+        //                                 t.DateCreated.Month.Equals(DateTime.Now.Month) &
+        //                                 t.DateCreated.Year.Equals(DateTime.Now.Year)
+        //                           select t;
+
+        //        int sumAllAmount = 0;
+
+        //        foreach (var x in transactions)
+        //        {
+        //            if (x.Category.Equals("Income"))
+        //                sumAllAmount -= (int)x.Amount;
+        //            else
+        //                sumAllAmount += (int)x.Amount;
+        //        }
+
+        //        if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
+        //        {
+        //            //
+        //            // add this to array that contains all faults 
+        //            //
+
+        //            fList.Add(new faultsContainer
+        //            {
+        //                deviation = (sumAllAmount - categoryAndRuleBorder.RuleBorder),
+        //                category = categoryAndRuleBorder.Category
+        //            });
+        //        }
+
+        //        sumAllAmount = 0;
+        //    }
+        //    ViewBag.faultList = fList;
+            
+        //    return View("runRules");
+        //}
+
+
+        //playGround START
+
+        public static List<string> runRules(string currUser)
         {
+            int sumAllAmount;
+            string str;
+            List<string> res = new List<string>();
 
             var currBalance = from s in udb.UsersDB
-                              where s.Username.Equals(User.Identity.Name)
+                              where s.Username.Equals(currUser)
                               select s.Balance;
 
             var currentBalance = currBalance.ToArray();
-            ViewBag.mainRule = 0;
 
             if (currentBalance[0] < 0)
-                ViewBag.mainRule = -1;
-
-           
+            {
+                str = "The Main rule limit has been broke - your balance is below zero";
+                res.Add(str);
+            }
             
-            List<faultsContainer> fList = new List<faultsContainer>();
-            var categoryAndRuleBorderSet = from r in db.Rules
-                                           where r.username.Equals(User.Identity.Name)
+            var categoryAndRuleBorderSets = from r in db.Rules
+                                           where r.username.Equals(currUser)
                                            select r;
+
+            var categoryAndRuleBorderSet = categoryAndRuleBorderSets.ToArray();
 
             foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
             {
                 var transactions = from t in adb.Transactions
-                                   where t.Username.Equals(User.Identity.Name) & 
-                                         t.Category.Equals(categoryAndRuleBorder.Category) & 
+                                   where t.Username.Equals(currUser) &
+                                         t.Category.Equals(categoryAndRuleBorder.Category) &
                                          t.DateCreated.Month.Equals(DateTime.Now.Month) &
                                          t.DateCreated.Year.Equals(DateTime.Now.Year)
                                    select t;
 
-                int sumAllAmount = 0;
+                sumAllAmount = 0;
 
                 foreach (var x in transactions)
                 {
@@ -172,22 +241,17 @@ namespace Money_Talks.Controllers
 
                 if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
                 {
-                    //
-                    // add this to array that contains all faults 
-                    //
-
-                    fList.Add(new faultsContainer
-                    {
-                        deviation = (sumAllAmount - categoryAndRuleBorder.RuleBorder),
-                        category = categoryAndRuleBorder.Category
-                    });
+                    str = "The " + categoryAndRuleBorder.Category + " rule limitation has been broke with a deviation of " + (sumAllAmount - categoryAndRuleBorder.RuleBorder) + " NIS";
+                    res.Add(str);
                 }
-
 
                 sumAllAmount = 0;
             }
-            ViewBag.faultList = fList;
-            return View("runRules");
+
+            return res;
         }
+
+
+       // //playGround END
     }
 }

@@ -18,7 +18,7 @@
 <table>
     <tr>
         <th>
-            Rule Border
+            Rule Limitation
         </th>
         <th>
             Category
@@ -55,3 +55,112 @@
 }
 
 </table>
+
+@foreach (string x in ViewBag.breakingRules)
+{
+    @x
+    <br />
+}
+
+
+@*
+
+<input type="button" name = "runRules" value = "run your rules" onclick= "javascript:window.open('/Rules/runRules/','Customer Search',height='window.screen.height - 100', width='200',left='window.screen.width - 250' ,top='10',status='no',toobar='no',resizable='yes',scrollbars='yes')"/>
+<br />
+
+<input type="button"
+       name="RunRules2"
+       value="Run Your Rules"
+       onclick="javascript:window.open('/Rules/runRules/',
+                                       'Customer Search',
+                                       'height=' + (window.screen.height - 100) + ',width=200,left=' + (window.screen.width - 250) + ',top=10,status=no,toolbar=no,resizable=yes,scrollbars=yes');"/>
+
+
+
+
+
+<div class="menu">
+  @if (true)
+  {
+      <p>harta</p>
+    @Ajax.ActionLink("Refresh",
+      "runRules",
+      "Rules",
+      new { },     
+      new AjaxOptions()
+      {
+        UpdateTargetId = "itemsContainer",
+        HttpMethod = "POST"
+      });
+  }
+  <hr />
+
+  </div>
+  <br />
+
+
+
+
+
+
+
+  
+
+
+
+
+@Ajax.ActionLink("runRules", "runRules", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, OnSuccess="openPopup" })<br />
+
+<script type="text/javascript">
+$('#runRules').click(function () {
+    // Add a container for the modal dialog, or get the existing one
+    var dialog = ($('#ModalDialog').length > 0) ? $('#ModalDialog') : $('<div id="ModalDialog" style="display:hidden"></div>').appendTo('body');
+    // load the data via ajax
+    $.get( 'RulesController/runRules', {},
+        function (responseText, textStatus, XMLHttpRequest) {
+            dialog.html(responseText);
+            dialog.dialog({
+                bgiframe: true,
+                modal: true,
+                width: 940,
+                title: 'My Title'
+            }); 
+        }
+    );
+});
+</script>
+*@
+@*
+
+<fieldset id="previewFld" title="Preview Results">        
+ 
+<div class="btn green preview">
+<a href="#">Preview</a></div>
+<div class="clear"></div>
+ 
+<span id="preview">&nbsp;</span>    
+</fieldset>
+ 
+<div class="btn orange submit">
+<a href="#">Export to CSV</a></div>
+<div class="clear"></div>
+
+<script id ="nir">
+$(document).ready(function () {
+ 
+    $('.preview').click(function () {
+        $('#preview').html('<strong>Loading...</strong>');
+        $.post('Rules/runRules/?' + $(this).closest("form").serialize(), function (data) {
+            $('#preview').html(data);
+        });
+    });
+ 
+    $('.submit').click(function () {
+        $('.submit a').html("Loading...");
+        $(this).closest("form").submit();
+        return false;
+    });
+ 
+});
+</script>
+*@
