@@ -9,8 +9,7 @@
 }
 
 body {
-	font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;
-	
+	font-family:Verdana, Arial, Helvetica, sans-serif, daxWide;	
 	background-image: -webkit-linear-gradient(top, #006600 50%, #006000 80%);
 }
 
@@ -31,16 +30,26 @@ body {
 	margin-left:50px;
 }
 
+#logoff_container {
+	position:fixed;
+	right:0;
+	margin-right: 75px;
+	color:#CCCCCC;
+	height:40px;
+	width:360px;
+}
+
 #tabArea {
 	right:0;
 	position:absolute;
 	top:50%;
-	margin-top:-25;
-	margin-right: 55px;
+	margin-top:-5;
+	margin-right: 75px;
+	padding-left:30px;
 	float:right;
 	text-align:center;
-	height:50px;
-	width:400px;
+	height:40px;
+	width:330px;
 	
 }
 
@@ -63,15 +72,15 @@ body {
 }
 
 #homeTab, #rulesTab, #aboutTab{
-	height:50px;
-	width:100px;
+	height:40px;
+	width:80px;
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFF00), to(#CC9900));
 	-webkit-box-shadow: 2px 2px 20px #000;
 	-webkit-transition: -webkit-transform 1s;
 	display:block;
 	text-decoration:none;
 	font-family: daxWide;
-	font-size:24px;
+	font-size:20px;
 	color:#000000;
 	display:table-cell;
 	vertical-align:middle;

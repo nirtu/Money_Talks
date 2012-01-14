@@ -5,16 +5,10 @@
     ViewBag.Title = "Money Talks";
 }
 
-
-<p>
-    @if (Request.IsAuthenticated)
-    {
-        <text>Welcome![ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
-    }
-</p>
-<p>
+@*<p>
     @Html.ActionLink("Test", "Pop")
-</p>
+</p>*@
+
 <p>
     <font size="3" face="arial" color="green">
         Current Balance: @ViewBag.balance
