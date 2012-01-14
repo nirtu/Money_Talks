@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * THE CONTROLLER - this is where the magic happens  
+ * This controller create all the functionalities that a rule can give for a user 
+ * 
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -11,14 +18,13 @@ namespace Money_Talks.Controllers
 {
     public class RulesController : Controller
     {
+        //creating a "link" to the DBs
+
         private static RulesDbContext db = new RulesDbContext();
         private static AccountDbContext adb = new AccountDbContext();
         private static UserDbContext udb = new UserDbContext();
 
-        //
-        // GET: /Rules/
-
-       
+        //presenting the Rules to the User (his own Rules)
         public ViewResult Index()
         {
             var rls = from r in db.Rules
@@ -30,18 +36,15 @@ namespace Money_Talks.Controllers
             return View(rls);
         }
 
-        //
-        // GET: /Rules/Details/5
-
+        //presenting the a detailed look of one rule to the user (his own Rule)
         public ViewResult Details(int id)
         {
             Rules rules = db.Rules.Find(id);
             return View(rules);
         }
 
-        //
-        // GET: /Rules/Create
-
+        //GET 
+        //allows to the user create new Rule
         public ActionResult Create()
         {
             var categoriesFromDB = from r in adb.Transactions
@@ -62,8 +65,8 @@ namespace Money_Talks.Controllers
             return View();
         }
 
-        //
-        // POST: /Rules/Create
+        // POST
+        // store the Rule in the DB 
 
         [HttpPost]
         public ActionResult Create(Rules rules)
@@ -81,8 +84,8 @@ namespace Money_Talks.Controllers
             return View(rules);
         }
 
-        //
-        // GET: /Rules/Edit/5
+        // GET
+        //allows to the user to reset a specific Rule 
 
         public ActionResult Edit(int id)
         {
@@ -90,9 +93,9 @@ namespace Money_Talks.Controllers
             return View(rules);
         }
 
-        //
-        // POST: /Rules/Edit/5
-
+        
+        // POST
+        // Store the edit changes 
         [HttpPost]
         public ActionResult Edit(Rules rules)
         {
@@ -107,8 +110,9 @@ namespace Money_Talks.Controllers
             return View(rules);
         }
 
-        //
-        // GET: /Rules/Delete/5
+        
+        // GET
+        // allows user to delete a Rule form his list of Rules 
 
         public ActionResult Delete(int id)
         {
@@ -116,8 +120,9 @@ namespace Money_Talks.Controllers
             return View(rules);
         }
 
-        //
-        // POST: /Rules/Delete/5
+        
+        // POST
+        // delete from the data base 
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
@@ -127,81 +132,15 @@ namespace Money_Talks.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        /*
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }*/
-
-        //public ActionResult runRules()
-        //{
-
-        //    var currBalance = from s in udb.UsersDB
-        //                      where s.Username.Equals(User.Identity.Name)
-        //                      select s.Balance;
-
-        //    var currentBalance = currBalance.ToArray();
-        //    ViewBag.mainRule = 0;
-
-        //    if (currentBalance[0] < 0)
-        //        ViewBag.mainRule = -1;
-
-
-
-        //    List<faultsContainer> fList = new List<faultsContainer>();
-        //    var categoryAndRuleBorderSet = from r in db.Rules
-        //                                   where r.username.Equals(User.Identity.Name)
-        //                                   select r;
-
-        //    foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
-        //    {
-        //        var transactions = from t in adb.Transactions
-        //                           where t.Username.Equals(User.Identity.Name) &
-        //                                 t.Category.Equals(categoryAndRuleBorder.Category) &
-        //                                 t.DateCreated.Month.Equals(DateTime.Now.Month) &
-        //                                 t.DateCreated.Year.Equals(DateTime.Now.Year)
-        //                           select t;
-
-        //        int sumAllAmount = 0;
-
-        //        foreach (var x in transactions)
-        //        {
-        //            if (x.Category.Equals("Income"))
-        //                sumAllAmount -= (int)x.Amount;
-        //            else
-        //                sumAllAmount += (int)x.Amount;
-        //        }
-
-        //        if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
-        //        {
-        //            //
-        //            // add this to array that contains all faults 
-        //            //
-
-        //            fList.Add(new faultsContainer
-        //            {
-        //                deviation = (sumAllAmount - categoryAndRuleBorder.RuleBorder),
-        //                category = categoryAndRuleBorder.Category
-        //            });
-        //        }
-
-        //        sumAllAmount = 0;
-        //    }
-        //    ViewBag.faultList = fList;
-            
-        //    return View("runRules");
-        //}
-
-
-        //playGround START
-
+        
+        //this function run all the rules and return a list of rules that has been broke
         public static List<string> runRules(string currUser)
         {
             int sumAllAmount;
             string str;
             List<string> res = new List<string>();
 
+            //check if the user has overdraft
             var currBalance = from s in udb.UsersDB
                               where s.Username.Equals(currUser)
                               select s.Balance;
@@ -213,7 +152,8 @@ namespace Money_Talks.Controllers
                 str = "The Main rule limit has been broke - your balance is below zero";
                 res.Add(str);
             }
-            
+
+            //checking for any Rules breaking             
             var categoryAndRuleBorderSets = from r in db.Rules
                                            where r.username.Equals(currUser)
                                            select r;
@@ -241,6 +181,7 @@ namespace Money_Talks.Controllers
 
                 if (sumAllAmount > categoryAndRuleBorder.RuleBorder)
                 {
+                    //creatig a MSG for each Rule breaking 
                     str = "The " + categoryAndRuleBorder.Category + " rule limitation has been broke with a deviation of " + (sumAllAmount - categoryAndRuleBorder.RuleBorder) + " NIS";
                     res.Add(str);
                 }
@@ -250,8 +191,5 @@ namespace Money_Talks.Controllers
 
             return res;
         }
-
-
-       // //playGround END
     }
 }

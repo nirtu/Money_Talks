@@ -1,4 +1,6 @@
-﻿@model Money_Talks.Models.Rules
+﻿@* A detailed view for each Rule *@
+
+@model Money_Talks.Models.Rules
 
 @{
     ViewBag.Title = "Details";
@@ -9,7 +11,7 @@
 <fieldset>
     <legend>Rules</legend>
 
-    <div class="display-label">RuleBorder</div>
+    <div class="display-label">Rule Limitation</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.RuleBorder)
     </div>
@@ -23,11 +25,7 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.DateCreated)
     </div>
-    @*
-    <div class="display-label">UserId</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.UserId)
-    </div>*@
+    
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.RuleId }) |

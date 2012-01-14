@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * This class initiate that date base for the Rules.
+ * this data base will be initiated just for the first time.
+ * this format of initialization allows to make changes in the DB Structure but must be remembered that every change in the DB Structure will cause to a Completely lost of the INFO
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,13 +20,14 @@ namespace Money_Talks.Models
     {
         protected override void Seed(RulesDbContext context)
         {
+            //this initiation have no logical meaning - just for the initiation
             var rules = new List<Rules>
             {
                 new Rules
                 {
                     RuleId = 1,
-                    UserId = 1, //need to fix it -> must be the current user 
-                    RuleBorder = 5000, // must be dynamic -> current balance of the current user
+                    UserId = 1, 
+                    RuleBorder = 5000,
                     DateCreated = DateTime.Now,
                     Category = "*",
                     username = "admin",

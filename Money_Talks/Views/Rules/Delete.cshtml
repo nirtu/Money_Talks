@@ -1,4 +1,6 @@
-﻿@model Money_Talks.Models.Rules
+﻿@* Deleting Rule view *@
+
+@model Money_Talks.Models.Rules
 
 @{
     ViewBag.Title = "Delete";
@@ -24,11 +26,6 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.DateCreated)
     </div>
-    @*
-    <div class="display-label">UserId</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.UserId)
-    </div>*@
 </fieldset>
 @using (Html.BeginForm()) {
     <p>
