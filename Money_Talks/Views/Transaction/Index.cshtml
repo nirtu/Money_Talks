@@ -16,19 +16,19 @@
         menuElement.style.display = "none";
     }
 </script>
-
-<div class="popup" id="menu1">
-    <!--Hide the menu when the text (Close popup) is clicked-->
-    <span onclick="hide_menu('menu1');" id="close">x</span>
-    <div id="popupContainer">
-        <div  id="popupMsg">
-            @foreach(var r in ViewBag.rules)
-            {
-                <strong>&middot;&emsp;</strong>@r<br/>
-            }
+    <div class="popup" id="menu1">
+        <!--Hide the menu when the text (Close popup) is clicked-->
+        <span onclick="hide_menu('menu1');" id="close">x</span>
+        <div id="popupContainer">
+            <div  id="popupMsg">
+                @foreach (var r in ViewBag.rules)
+                {
+                    <strong>&middot;&emsp;</strong>
+                    @r<br/>
+                }
+            </div>
         </div>
     </div>
-</div>
 
 <p>
     @Html.ActionLink("Test", "Pop")
