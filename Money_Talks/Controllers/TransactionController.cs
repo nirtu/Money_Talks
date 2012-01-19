@@ -3,6 +3,8 @@ using System.Linq;
 using System.Web.Mvc;
 using Money_Talks.Models;
 using System;
+using System.Collections.Generic;
+using System.Web.Helpers;
 
 namespace Money_Talks.Controllers
 {
@@ -257,6 +259,51 @@ namespace Money_Talks.Controllers
             balance -= transactionAmount;
 
             return balance;
+        }
+
+        public ActionResult GetRainfallChart()
+        {
+            List<string> allCategories = new List<string>();
+            List<int> allAmounts = new List<int>();
+            int sum = 0;
+
+            var transactions = from t in transactionsDb.Transactions
+                               where t.Username.Equals(User.Identity.Name) &
+                                     t.TransactionType.Equals("Outcome") &
+                                     t.DateCreated.Month.Equals(DateTime.Now.Month) &
+                                     t.DateCreated.Year.Equals(DateTime.Now.Year)
+                               select t;
+
+            foreach (var x in transactions)
+            {
+                sum = 0;
+                if (!allCategories.Contains(x.Category))
+                {
+                    allCategories.Add(x.Category);
+                    foreach (var y in transactions)
+                    {
+                        if (y.Category.Equals(x.Category))
+                            sum += (int)y.Amount;
+                    }
+                    allAmounts.Add(sum);
+                }
+            }
+
+            IEnumerable<string> xVal = allCategories;
+            IEnumerable<int> yVal = allAmounts;
+
+            var key = new Chart(width: 400, height: 400)
+                .AddSeries(
+                    
+                    chartType: "pie",
+                    legend: "Rainfall",
+                    xValue: xVal,
+                    yValues: yVal).AddTitle("Expenses Segmentation table")
+                .GetBytes("png");
+
+            return File(key, "image/png");
+
+
         }
     }
 }

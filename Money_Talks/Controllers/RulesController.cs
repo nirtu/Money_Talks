@@ -13,6 +13,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Money_Talks.Models;
+using System.Web.Helpers;
+using System.Collections;
+using System.IO;
 
 namespace Money_Talks.Controllers
 {
@@ -81,6 +84,7 @@ namespace Money_Talks.Controllers
                 return RedirectToAction("Index");
             }
 
+            
             return View(rules);
         }
 
@@ -173,7 +177,7 @@ namespace Money_Talks.Controllers
 
                 foreach (var x in transactions)
                 {
-                    if (x.Category.Equals("Income"))
+                    if (x.TransactionType.Equals("Income"))
                         sumAllAmount -= (int)x.Amount;
                     else
                         sumAllAmount += (int)x.Amount;
