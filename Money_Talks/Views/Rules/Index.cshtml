@@ -1,10 +1,12 @@
 ﻿@* The main view - presenting all of the Rules that the user creats *@
 
 @model IEnumerable<Money_Talks.Models.Rules>
+@using Money_Talks.Controllers
 
 @{
     ViewBag.Title = "Index";
 }
+
 
 <h2>Rule Your MONEY</h2>
 
@@ -13,6 +15,7 @@
 </p>
 
 
+    
 <table>
     <tr>
         <th>
@@ -24,7 +27,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.RuleBorder)
@@ -33,9 +37,9 @@
             @Html.DisplayFor(modelItem => item.Category)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RuleId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RuleId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RuleId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.RuleId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RuleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RuleId })
         </td>
     </tr>
 }
@@ -47,5 +51,3 @@
     @x
     <br />
 }
-
-
