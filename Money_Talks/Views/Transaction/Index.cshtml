@@ -5,9 +5,34 @@
     ViewBag.Title = "Money Talks";
 }
 
-@*<p>
+<link href="../../graphics/styles3.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    //Hide a named menu
+    function hide_menu(named) {
+        //get the named menu
+        var menuElement = document.getElementById(named);
+        //hide it with a style attribute
+        menuElement.style.display = "none";
+    }
+</script>
+
+<div class="popup" id="menu1">
+    <!--Hide the menu when the text (Close popup) is clicked-->
+    <span onclick="hide_menu('menu1');" id="close">x</span>
+    <div id="popupContainer">
+        <div  id="popupMsg">
+            @foreach(var r in ViewBag.rules)
+            {
+                <strong>&middot;&emsp;</strong>@r<br/>
+            }
+        </div>
+    </div>
+</div>
+
+<p>
     @Html.ActionLink("Test", "Pop")
-</p>*@
+</p>
 
 <p>
     <font size="3" face="arial" color="green">

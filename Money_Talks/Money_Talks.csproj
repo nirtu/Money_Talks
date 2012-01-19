@@ -117,6 +117,7 @@
     <Content Include="graphics\images\join_img.png" />
     <Content Include="graphics\styles.css" />
     <Content Include="graphics\styles2.css" />
+    <Content Include="graphics\styles3.css" />
     <Content Include="obj\Debug\Money_Talks.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Money_Talks.dll" />
     <Content Include="obj\Debug\Money_Talks.pdb" />
@@ -205,9 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Rules\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Rules\runRules.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="graphics\fonts\DaxWide-Light.ttf" />

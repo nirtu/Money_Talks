@@ -16,6 +16,11 @@ namespace Money_Talks.Controllers
 
         public ViewResult Tabs()
         {
+            var user = from u in usersDb.UsersDB
+                       where u.Username.Equals(User.Identity.Name)
+                       select u;
+            ViewBag.userModel = (user.ToArray())[0];
+
             return View();
         }
 
@@ -37,6 +42,8 @@ namespace Money_Talks.Controllers
                                    (ut.DateCreated.Month == DateTime.Now.Month)
                                    orderby ut.DateCreated
                                    select ut;
+
+            ViewBag.rules = RulesController.runRules(User.Identity.Name);
 
             return View(userTransactions);
         }
@@ -152,6 +159,7 @@ namespace Money_Talks.Controllers
 
         public ActionResult Pop()
         {
+            ViewBag.rules = RulesController.runRules(User.Identity.Name);
             return View();
         }
 

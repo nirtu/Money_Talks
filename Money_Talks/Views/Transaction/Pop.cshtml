@@ -4,121 +4,63 @@
     ViewBag.Title = "Pop";
 }
 
-<h2>Pop</h2>
-
-
-
-
-
-
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd"> 
-<html> 
-<head> 
-<title>Untitled Document</title> 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
-<meta http-equiv="Content-Style-Type" content="text/css"> 
-<meta http-equiv="Content-Script-Type" content="text/javascript"> 
-<script type="text/javascript">
-    var delay = 3000; //delay in milliseconds 
-    var desc = [];
-    var obj; var settime
-    desc[0] = 'some descriptive text about TEXT 1 TEXT 1';
-    desc[1] = 'TEXT 2 text 2 some descriptive text here';
-    desc[2] = '333 text 333 some descriptive text here about TEXT 3';
-    onload = function () {
-        obj = document.getElementById('myid').getElementsByTagName('span');
-        var txt = document.getElementById('mytxt');
-        for (var i = 0; i < obj.length; i++) {
-            obj[i].onmouseover = function () {
-                for (var j = 0; j < obj.length; j++) {
-                    if (settime) { clearTimeout(settime) }
-                    if (this == obj[j]) { txt.firstChild.data = desc[j]; }
-                }
-            }
-            obj[i].onmouseout = function () {
-                settime = setTimeout('clear()', delay)
-            }
-        }
-    }
-    function clear() {
-        document.getElementById('mytxt').firstChild.data = ''
-    } 
-</script> 
-
-
-
-
-
-
-
-
-
-
-
-</head> 
-<body> 
-<div id="myid"> 
-<span>text 1 </span> <span>text 2 </span> <span>text 3 </span> 
-</div> 
-<br/> 
-<div id="mytxt">&nbsp;</div> 
-</body> 
-</html>  
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <title>Simple PopupMenu</title>
 
 <style type="text/css">
-/*Important style definition is 'position:absolute'. Means the element can
-be placed at an arbitrary position without affecting the flow of surrounding
-elements*/
 .popup
 {
 	position:absolute;
-	border:solid 1px black;
-	background-color:white;
-	padding:4px;
+    left: 50%;
+    margin-left: -250px;
+	border:solid 1px #FF9535;
+    border-radius: 4px;
+	background-color:#FAFF95;
+	padding:2px;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 10px #000;
+    width: 500px;
+}
+
+#close {
+    font-size:15px; 
+    cursor:pointer; 
+    color:red; 
+    right:-4px; 
+    top:4px; 
+    margin-right:10px; 
+    position:absolute;    
+    padding-left: 6px;
+    padding-right: 5px;
+    
+}
+
+#close:hover {
+    color:white;
+    border-radius: 40px;
+    background-color: red;
+    -webkit-box-shadow: 1px 1px 5px #000;
+}
+
+#popupContainer {
+    height:100%; 
+    width:100%; 
+    margin:auto
+}
+
+#popupMsg {
+    width:100%; 
+    height:100%;
+    margin:auto; 
+    margin-top:10px; 
+    padding-bottom:10px;
+    text-align: center;
 }
 </style>
 
 <script type="text/javascript">
-    //findPos function is from http://www.quirksmode.org/js/findpos.html;
-    //where its workings are explained in more detail.
-    function findPos(obj) 
-    {
-        var curtop = 0;
-        var curleft = 0;
-        if (obj.offsetParent) 
-        {
-            curleft = obj.offsetLeft;
-            curtop = obj.offsetTop;
-            while (obj = obj.offsetParent) 
-            {
-                curleft += obj.offsetLeft;
-                curtop += obj.offsetTop;
-            }
-        }
-        return [curleft, curtop];
-    }
-
-    //Display a named menu, at the position of another object
-    function display_menu(parent, named)
-    {
-        //get the named menu
-        var menuElement = document.getElementById(named);
-        //override the 'display:none;' style attribute
-        menuElement.style.display = "";
-        //get the placement of the element that invoked the menu...
-        var placement = findPos(parent);
-        //...and put the menu there
-        menuElement.style.left = placement[0] + "px";
-        menuElement.style.top = placement[1] + "px";
-    }
-
     //Hide a named menu
     function hide_menu(named)
     {
@@ -131,34 +73,28 @@ elements*/
 </head>
 <body>
 
-<!--Define the menu's contents. It's important to put the display:none style attribute
-here rather than in a <style> block, because it can be overriden easily if it's assigned here-->
-<div class="popup" id="menu1" style="display:none;">
-	<ul>
-		<li><a href="#">Menu 1</a></li>
-		<li><a href="#">Menu 2</a></li>
-		<li><a href="#">Menu 3</a></li>
-	</ul>
-	<!--Hide the menu when the text (Close popup) is clicked-->
-	<span onclick="hide_menu('menu1');">(Close popup)</span>
-</div>
+    <div class="popup" id="menu1">
+        <!--Hide the menu when the text (Close popup) is clicked-->
+        <span onclick="hide_menu('menu1');" id="close">x</span>
+        <div id="popupContainer">
+            <div  id="popupMsg">
+                @foreach(var r in ViewBag.rules)
+                {
+                    <strong>&middot;&emsp;</strong>@r<br/>
+                }
+            </div>
+        </div>
+    </div>
 
 <!--Mouseovering on this element will show the menu with id 'menu1', at the position of {this}, that is
 this element-->
-<a href="#" onmouseover="display_menu(this,'menu1');">Popup on hover</a>
-<p>
-Other text here, should not be obscured on pops.
-</p>
-<p>
-Other text here, should not be obscured on pops.
-</p>
-<p>
-Other text here, should not be obscured on pops.
-</p>
-<a href="#" onmouseover="display_menu(this,'menu1')">Popup on hover<br/></a>
+<a href="#" onmouseover="display_menu(this,'menu1');" on>Popup on hover</a>
 
 </body>
 </html>
+
+
+
 
 
 
