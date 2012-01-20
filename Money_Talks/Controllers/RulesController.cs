@@ -23,9 +23,9 @@ namespace Money_Talks.Controllers
     {
         //creating a "link" to the DBs
 
-        private static RulesDbContext db = new RulesDbContext();
-        private static AccountDbContext adb = new AccountDbContext();
-        private static UserDbContext udb = new UserDbContext();
+        private  RulesDbContext db = new RulesDbContext();
+        private  AccountDbContext adb = new AccountDbContext();
+        private  UserDbContext udb = new UserDbContext();
 
         //presenting the Rules to the User (his own Rules)
         public ViewResult Index()
@@ -81,7 +81,7 @@ namespace Money_Talks.Controllers
                 rules.username = User.Identity.Name;
                 db.Rules.Add(rules);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Transaction");
             }
 
             
@@ -140,13 +140,17 @@ namespace Money_Talks.Controllers
         //this function run all the rules and return a list of rules that has been broke
         public static List<string> runRules(string currUser)
         {
+            RulesDbContext rulesDB = new RulesDbContext(); //db
+            AccountDbContext accountDB = new AccountDbContext(); //adb
+            UserDbContext userDB = new UserDbContext(); //udb
+
             int sumAllAmount;
             string str;
             bool listIsEmpty = true;
             List<string> res = new List<string>();
 
             //check if the user has overdraft
-            var currBalance = from s in udb.UsersDB
+            var currBalance = from s in userDB.UsersDB
                               where s.Username.Equals(currUser)
                               select s.Balance;
 
@@ -160,7 +164,7 @@ namespace Money_Talks.Controllers
             }
 
             //checking for any Rules breaking             
-            var categoryAndRuleBorderSets = from r in db.Rules
+            var categoryAndRuleBorderSets = from r in rulesDB.Rules
                                            where r.username.Equals(currUser)
                                            select r;
 
@@ -168,7 +172,7 @@ namespace Money_Talks.Controllers
 
             foreach (var categoryAndRuleBorder in categoryAndRuleBorderSet)
             {
-                var transactions = from t in adb.Transactions
+                var transactions = from t in accountDB.Transactions
                                    where t.Username.Equals(currUser) &
                                          t.Category.Equals(categoryAndRuleBorder.Category) &
                                          t.DateCreated.Month.Equals(DateTime.Now.Month) &
