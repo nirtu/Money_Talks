@@ -16,6 +16,8 @@
         menuElement.style.display = "none";
     }
 </script>
+@if (ViewBag.rules != null)
+{
     <div class="popup" id="menu1">
         <!--Hide the menu when the text (Close popup) is clicked-->
         <span onclick="hide_menu('menu1');" id="close">x</span>
@@ -29,7 +31,7 @@
             </div>
         </div>
     </div>
-
+}
 <p>
     @Html.ActionLink("Test", "Pop")
 </p>

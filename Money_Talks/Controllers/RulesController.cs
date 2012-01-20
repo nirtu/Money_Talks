@@ -142,6 +142,7 @@ namespace Money_Talks.Controllers
         {
             int sumAllAmount;
             string str;
+            bool listIsEmpty = true;
             List<string> res = new List<string>();
 
             //check if the user has overdraft
@@ -155,6 +156,7 @@ namespace Money_Talks.Controllers
             {
                 str = "The Main rule limit has been broke - your balance is below zero";
                 res.Add(str);
+                listIsEmpty = false;
             }
 
             //checking for any Rules breaking             
@@ -188,13 +190,16 @@ namespace Money_Talks.Controllers
                     //creatig a MSG for each Rule breaking 
                     str = "The " + categoryAndRuleBorder.Category + " rule limitation has been broke with a deviation of " + (sumAllAmount - categoryAndRuleBorder.RuleBorder) + " NIS";
                     res.Add(str);
+                    listIsEmpty = false;
                 }
 
                 sumAllAmount = 0;
             }
 
-
-            return res;
+            if (listIsEmpty)
+                return null;
+            else
+                return res;
         }
     }
 }

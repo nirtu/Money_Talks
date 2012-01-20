@@ -46,8 +46,11 @@
 
 </table>
 
-@foreach (string x in ViewBag.breakingRules)
+@if (ViewBag.breakingRules != null)
 {
-    @x
-    <br />
+    foreach (string x in ViewBag.breakingRules)
+    {
+        @x
+        <br />
+    }
 }
