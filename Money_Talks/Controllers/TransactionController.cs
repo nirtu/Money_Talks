@@ -300,10 +300,15 @@ namespace Money_Talks.Controllers
             IEnumerable<string> xVal = allCategories;
             IEnumerable<int> yVal = allAmounts;
 
-            var key = new Chart(width: 400, height: 400)
+//Bar
+//Column
+//Line
+//Pie
+
+            var key = new Chart(width: 550, height: 400)
                 .AddSeries(
-                    
-                    chartType: "pie",
+
+                chartType: "Pie",
                     legend: "Rainfall",
                     xValue: xVal,
                     yValues: yVal).AddTitle("Expenses Segmentation table")

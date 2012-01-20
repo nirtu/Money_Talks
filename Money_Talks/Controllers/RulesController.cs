@@ -81,7 +81,7 @@ namespace Money_Talks.Controllers
                 rules.username = User.Identity.Name;
                 db.Rules.Add(rules);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Transaction");
+                return RedirectToAction("Index");
             }
 
             
