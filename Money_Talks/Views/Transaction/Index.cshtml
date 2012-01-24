@@ -9,11 +9,26 @@
 
 <script type="text/javascript">
     //Hide a named menu
-    function hide_menu(named) {
+    function hide_menu(named)
+    {
         //get the named menu
         var menuElement = document.getElementById(named);
         //hide it with a style attribute
         menuElement.style.display = "none";
+    }
+
+    function change_Chart(display, hide1, hide2, hide3) {
+        //get the named menu
+        var displayElement = document.getElementById(display);
+        var hideElement1 = document.getElementById(hide1);
+        var hideElement2 = document.getElementById(hide2);
+        var hideElement3 = document.getElementById(hide3);
+
+        displayElement.style.display = "inline";
+        //hide it with a style attribute
+        hideElement1.style.display = "none";
+        hideElement2.style.display = "none";
+        hideElement3.style.display = "none";
     }
 </script>
 @if (ViewBag.rules != null)
@@ -36,7 +51,15 @@
     @Html.ActionLink("Test", "Pop")
 </p>
 
-<img src="@Url.Action("GetRainfallChart")" alt="SimpleChart" style="border: 1px solid black; float: right"  />
+<span onclick="change_Chart('pieChart', 'areaChart', 'columnChart', 'barChart');" style="cursor: pointer">Pie</span>
+<span onclick="change_Chart('areaChart', 'pieChart', 'columnChart', 'barChart');" style="cursor: pointer">Area</span>
+<span onclick="change_Chart('columnChart', 'pieChart', 'areaChart', 'barChart');" style="cursor: pointer">Column</span>
+<span onclick="change_Chart('barChart', 'pieChart', 'areaChart', 'columnChart');" style="cursor: pointer">Bar</span>
+
+<img id="pieChart" src="@Url.Action("GetRainfallChart", new { type = "pie" })" alt="SimpleChart" style="border: 1px solid black; float: right"  />
+<img id="areaChart" src="@Url.Action("GetRainfallChart", new{ type = "area"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
+<img id="columnChart" src="@Url.Action("GetRainfallChart", new{type = "column"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
+<img id="barChart" src="@Url.Action("GetRainfallChart", new{type = "bar"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
 
 <p>
     <font size="3" face="arial" color="green">
@@ -75,8 +98,7 @@
     <input type="date" placeholder="Start Date" name="startDate" />
     <input type="date" placeholder="End Date" name="endDate"  />
     
-    <input type="submit" name="submit" value="Submit" />
-    //<input type="submit" name="submit" value="View All" />                            
+    <input type="submit" name="submit" value="Submit" />                          
 }
 
 <table>

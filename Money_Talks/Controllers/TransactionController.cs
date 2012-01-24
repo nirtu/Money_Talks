@@ -17,6 +17,10 @@ namespace Money_Talks.Controllers
 
         private AccountDbContext transactionsDb = new AccountDbContext();
         private UserDbContext usersDb = new UserDbContext();
+        private static DateTime start = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1); 
+        private static DateTime end = new DateTime(DateTime.Now.Year, DateTime.Now.Month,30 );
+        
+        
         
         public ViewResult Tabs()
         {
@@ -47,6 +51,7 @@ namespace Money_Talks.Controllers
 
             ViewBag.rules = RulesController.runRules(User.Identity.Name);
 
+
             return View(userTransactions);
         }
 
@@ -72,6 +77,8 @@ namespace Money_Talks.Controllers
 
             var userModel = user.ToArray();
             ViewBag.balance = userModel[0].Balance;
+            start = startDate;
+            end = endDate;
 
             return View(userTransactions);
         }
@@ -269,19 +276,19 @@ namespace Money_Talks.Controllers
             return balance;
         }
 
-        public ActionResult GetRainfallChart()
+        public ActionResult GetRainfallChart(string type)
         {
             List<string> allCategories = new List<string>();
             List<int> allAmounts = new List<int>();
             int sum = 0;
 
             var transactions = from t in transactionsDb.Transactions
-                               where t.Username.Equals(User.Identity.Name) &
-                                     t.TransactionType.Equals("Outcome") &
-                                     t.DateCreated.Month.Equals(DateTime.Now.Month) &
-                                     t.DateCreated.Year.Equals(DateTime.Now.Year)
+                               where t.Username.Equals(User.Identity.Name) &&
+                                     t.TransactionType.Equals("Outcome") &&
+                                     (t.DateCreated >= start && t.DateCreated <= end)
                                select t;
 
+            
             foreach (var x in transactions)
             {
                 sum = 0;
@@ -308,7 +315,7 @@ namespace Money_Talks.Controllers
             var key = new Chart(width: 550, height: 400)
                 .AddSeries(
 
-                chartType: "Pie",
+                    chartType: type,
                     legend: "Rainfall",
                     xValue: xVal,
                     yValues: yVal).AddTitle("Expenses Segmentation table")
