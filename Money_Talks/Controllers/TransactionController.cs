@@ -307,18 +307,15 @@ namespace Money_Talks.Controllers
             IEnumerable<string> xVal = allCategories;
             IEnumerable<int> yVal = allAmounts;
 
-//Bar
-//Column
-//Line
-//Pie
+            //Bar Column Line Pie
 
-            var key = new Chart(width: 550, height: 400)
+            var key = new Chart(width: 540, height: 440)
                 .AddSeries(
 
                     chartType: type,
                     legend: "Rainfall",
                     xValue: xVal,
-                    yValues: yVal).AddTitle("Expenses Segmentation table")
+                    yValues: yVal).AddTitle("")
                 .GetBytes("png");
 
             return File(key, "image/png");

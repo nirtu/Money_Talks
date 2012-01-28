@@ -1,16 +1,14 @@
 ﻿@using Money_Talks.Models
 @model IEnumerable<Money_Talks.Models.TransactionModel>
-
-@{
-    ViewBag.Title = "Money Talks";
-}
-
-<link href="../../graphics/styles3.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html >
+<head>
+<title></title>
+<link href="../../graphics/styles3.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
     //Hide a named menu
-    function hide_menu(named)
-    {
+    function hide_rules_box(named) {
         //get the named menu
         var menuElement = document.getElementById(named);
         //hide it with a style attribute
@@ -25,119 +23,179 @@
         var hideElement3 = document.getElementById(hide3);
 
         displayElement.style.display = "inline";
+        
         //hide it with a style attribute
         hideElement1.style.display = "none";
         hideElement2.style.display = "none";
         hideElement3.style.display = "none";
     }
+
+    function view_as_graph() {
+        var hideElement = document.getElementById("tableView");
+        var displayElement = document.getElementById("chartView");
+        
+        hideElement.style.display = "none";
+        displayElement.style.display = "inline";
+    }
+
+    function back_to_table_view() {
+        var hideElement = document.getElementById("chartView");
+        var displayElement = document.getElementById("tableView");
+
+        hideElement.style.display = "none";
+            displayElement.style.display = "inline";
+    }
+
+    function showEditDelete() {
+        var displayElement = document.getElementById("editDelete");
+        displayElement.style.display = "inline";
+    }
+
+    function hideEditDelete() {
+        var hideElement = document.getElementById("editDelete");
+        hideElement.style.display = "none";
+    }
+
+    function showCreate() {
+        var displayElement = document.getElementById("create");
+        displayElement.style.display = "inline";
+    }
+
+    function hideCreate() {
+        var hideElement = document.getElementById("create");
+        hideElement.style.display = "none";
+    }
+
+    
 </script>
-@if (ViewBag.rules != null)
-{
-    <div class="popup" id="menu1">
-        <!--Hide the menu when the text (Close popup) is clicked-->
-        <span onclick="hide_menu('menu1');" id="close">x</span>
-        <div id="popupContainer">
-            <div  id="popupMsg">
-                @foreach (var r in ViewBag.rules)
-                {
-                    @*<strong>&middot;&emsp;</strong>*@
-                    @r<br/>
-                }
+</head>
+<body>
+    <div id="rightArea">
+        <div id="chartView" style="display: none">Select graph : 
+            <span onclick="change_Chart('pieChart', 'areaChart', 'columnChart', 'barChart');" style="cursor: pointer">Pie </span>&middot;
+            <span onclick="change_Chart('areaChart', 'pieChart', 'columnChart', 'barChart');" style="cursor: pointer">Area </span>&middot;
+            <span onclick="change_Chart('columnChart', 'pieChart', 'areaChart', 'barChart');" style="cursor: pointer">Column </span>&middot;
+            <span onclick="change_Chart('barChart', 'pieChart', 'areaChart', 'columnChart');" style="cursor: pointer">Bar</span>
+    
+            <div style="margin: auto">
+                <img id="pieChart" src="@Url.Action("GetRainfallChart", new { type = "pie" })" alt="SimpleChart" />
+                <img id="areaChart" src="@Url.Action("GetRainfallChart", new{ type = "area"})" alt="SimpleChart" style="display: none"  />
+                <img id="columnChart" src="@Url.Action("GetRainfallChart", new{type = "column"})" alt="SimpleChart" style="display: none"  />
+                <img id="barChart" src="@Url.Action("GetRainfallChart", new{type = "bar"})" alt="SimpleChart" style="display: none"  />
             </div>
+            <div onclick="back_to_table_view();" id="viewAsTable">Back to table view</div>
+        </div>
+    
+        <div id="tableView">
+            <p>
+                <font size="3" face="arial">
+                    Recent Transactions:
+                </font>
+            </p>
+
+            @* Allows to submit a date range for the transactions *@
+            <form action="../Transaction/Index" method="POST">
+                <input type="date" placeholder="Start Date" name="startDate" size="27" />
+                <input type="date" placeholder="End Date" name="endDate" size="27"/>
+                <input type="submit" name="submit" class="submitDate"/>  
+            </form>
+            <form action="../Transaction/Index" method="POST" style="position: absolute; top: 49px; right: 20px;">
+                <input type="hidden" value="1.1.2000" name="startDate"/>
+                <input type="hidden" value="1.1.2020" name="endDate"/>
+                <input type="submit" value="View All" class="submitDate"/>  
+            </form>
+
+            <div id="tableDiv" style="height: 375px; margin-top:10px">
+                <table class="sofT">
+                    <tr>
+                        <th class="helpHed">Amount</th>
+                        <th class="helpHed">Type</th>
+                        <th class="helpHed">Date Created</th>
+                        <th class="helpHed" colspan="2" style="text-indent: -95px">Category</th>
+                    </tr>
+
+                    @foreach (var transaction in Model.Reverse())
+                    {
+                        <tr>
+                            <td class="sup1">@Html.DisplayFor(modelItem => transaction.Amount)</td>
+                            <td class="sup">@Html.DisplayFor(modelItem => transaction.TransactionType)</td>
+                            <td class="sup">@Html.DisplayFor(modelItem => transaction.DateCreated)</td>
+                            <td class="sup">@Html.DisplayFor(modelItem => transaction.Category)</td>
+        
+                            <td class="sup" style="width: 90px">
+                                <div  id="editDelete">
+                                    @Html.ActionLink("Edit", "Edit", new { id = transaction.TransactionId }, new { @style = "color:#dde002;" }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = transaction.TransactionId }, new { @style = "color:#dde002;" })
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div onclick="view_as_graph();" id="viewAsGraph">View as graph</div>
         </div>
     </div>
-}
-<p>
-    @Html.ActionLink("Test", "Pop")
-</p>
 
-<span onclick="change_Chart('pieChart', 'areaChart', 'columnChart', 'barChart');" style="cursor: pointer">Pie</span>
-<span onclick="change_Chart('areaChart', 'pieChart', 'columnChart', 'barChart');" style="cursor: pointer">Area</span>
-<span onclick="change_Chart('columnChart', 'pieChart', 'areaChart', 'barChart');" style="cursor: pointer">Column</span>
-<span onclick="change_Chart('barChart', 'pieChart', 'areaChart', 'columnChart');" style="cursor: pointer">Bar</span>
 
-<img id="pieChart" src="@Url.Action("GetRainfallChart", new { type = "pie" })" alt="SimpleChart" style="border: 1px solid black; float: right"  />
-<img id="areaChart" src="@Url.Action("GetRainfallChart", new{ type = "area"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
-<img id="columnChart" src="@Url.Action("GetRainfallChart", new{type = "column"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
-<img id="barChart" src="@Url.Action("GetRainfallChart", new{type = "bar"})" alt="SimpleChart" style="border: 1px solid black; float: right; display: none"  />
+    <div id="leftArea">
+        @* <p>
+            @Html.ActionLink("Test", "Pop")
+        </p>*@
+        <div>
+            @{
+                if (ViewBag.balance >= 0)
+                {
+                    <br/><div style="font-family: Verdana; color: green; font-size: 20px">Your Current Balance:</div><br/>
+                    <div id="goodBalance">@ViewBag.balance</div><br/>
+                }
+                else if (ViewBag.balance < 0)
+                {
+                    <br/><div style="font-family: Verdana; color: red; font-size: 20px">Your Current Balance:</div><br/>
+                    <div id="badBalance">@ViewBag.balance</div><br/>
+                }          
+            }
+        </div>
 
-<p>
-    <font size="3" face="arial" color="green">
-        Current Balance: @ViewBag.balance
-    </font>
+@*        <p>@Html.ActionLink("Create New Transaction", "Create")<br/><br/></p>*@
+        <div onmouseover="showCreate()" style="width: 150px; margin: auto">Create New Transaction</div>
+
+        <div style="height: 50%; width: 58%; background-color: 
+            #414141; position: absolute; bottom: 16px; left: 110px; 
+            border: 6px solid yellow; -webkit-box-shadow: #000000 3px 3px 15px;
+            border-radius:20px; display:none" onmouseover="showCreate()" onmouseout="hideCreate()" id="create">
+            
+            <form action="../Transaction/Create" method="POST">
+                <p style="width:60%; margin:auto; margin-top: 14px; -webkit-box-shadow: #000000 3px 3px 15px;"><input type="text" placeholder="Amount" name="Amount" style="padding:6px; height:100%; width:100%"/></p>
+                <p style="width:65%; margin:auto; margin-left:64px; margin-top: 14px; -webkit-box-shadow: #000000 3px 3px 15px;"><select name="TransactionType" style="padding:6px; -webkit-box-shadow: #000000 3px 3px 15px; height:100%; width:100%">
+                <option value='' style="display:none">Transaction Type</option>
+                <option value="Income">Income</option>
+                <option value="Outcome">Outcome</option>
+                </select></p>
+                <p style="width:60%; margin:auto; margin-top: 14px; -webkit-box-shadow: #000000 3px 3px 15px;"><input type="date" placeholder="Date" name="DateCreated" style="padding:6px; -webkit-box-shadow: #000000 3px 3px 15px; height:100%; width:100%"/></p>
+                <p style="width:60%; margin:auto; margin-top: 14px; -webkit-box-shadow: #000000 3px 3px 15px;"><input type="text" placeholder="Category" name="Category" style="padding:6px; -webkit-box-shadow: #000000 3px 3px 15px; height:100%; width:100%"/></p>
+                <p style="width:65%; margin:auto; margin-left:64px; margin-top: 14px; -webkit-box-shadow: #000000 3px 3px 15px;"><input type="submit" value="Create" style="padding: 6px; height:100%; width:100%"/></p>
+            </form>
+
+            </div>
+    </div>
     
-    @{
-        if (ViewBag.balance == 0)
+    @if (ViewBag.rules != null)
         {
-            <br/> <br/>
-            <font size="4" face="arial" color="green">
-                Your balance is stable
-            </font>
+            <div class="popup" id="rulesBox">
+                <span onclick="hide_rules_box('rulesBox');" id="close">x</span>
+                <div id="popupContainer">
+                    <div  id="popupMsg">
+                        @foreach (var r in ViewBag.rules)
+                        {
+                            @*<strong>&middot;&emsp;</strong>*@
+                            @r<br/>
+                        }
+                    </div>
+                </div>
+            </div>
         }
-        else if (ViewBag.balance < 0)
-        {
-            <br/> <br/>
-            <font size="4" face="arial" color="red">
-                Your balance is below zero
-            </font>
-        }          
-    }
-</p>
+</body>
+</html>
 
-<p>@Html.ActionLink("Create New Transaction", "Create")<br/><br/></p>
 
-<p>
-    <font size="3" face="arial">
-        Recent Transactions:
-    </font>
-</p>
 
-@* Allows to submit a date range for the transactions *@
-@using (Html.BeginForm())
-{
-    <input type="date" placeholder="Start Date" name="startDate" />
-    <input type="date" placeholder="End Date" name="endDate"  />
-    
-    <input type="submit" name="submit" value="Submit" />                          
-}
-
-<table>
-    <tr>
-        <th>
-            Amount
-        </th>
-        <th>
-            Transaction Type
-        </th>
-        <th>
-            Date Created
-        </th>
-        <th>
-            Category
-        </th>
-    </tr>
-
-    @foreach (var transaction in Model.Reverse())
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => transaction.Amount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => transaction.TransactionType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => transaction.DateCreated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => transaction.Category)
-            </td>
-        
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = transaction.TransactionId }) |
-                @Html.ActionLink("Details", "Details", new { id = transaction.TransactionId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = transaction.TransactionId })
-            </td>
-        </tr>
-    }
-</table>
