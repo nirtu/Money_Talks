@@ -7,50 +7,48 @@
     ViewBag.Title = "Index";
 }
 
+<link href="../../graphics/styles3.css" rel="stylesheet" type="text/css" />
 
+<body style="text-align: center">
 <h2>Rule Your MONEY</h2>
 
 <p>
     @Html.ActionLink("Create New Rule", "Create")
 </p>
 
-
-    
-<table>
+<div style="height:250px; width: 600px; overflow: auto; margin: auto">
+<table class="sofT">
     <tr>
-        <th>
-            Rule Limitation
-        </th>
-        <th>
-            Category
-        </th>
-        <th></th>
+        <th class="helpHed" style="width:150px">Rule Limitation</th>
+        <th class="helpHed">Category</th>
+        <th class="helpHed"></th>
     </tr>
 @foreach (var item in Model)
 {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RuleBorder)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.RuleId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.RuleId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.RuleId })
+        <td class="sup1">@Html.DisplayFor(modelItem => item.RuleBorder)</td>
+        <td class="sup">@Html.DisplayFor(modelItem => item.Category)</td>
+        <td class="sup">
+            @Html.ActionLink("Edit", "Edit", new { id = item.RuleId }, new { @style = "color:#dde002;" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RuleId }, new { @style = "color:#dde002;" })
         </td>
     </tr>
 }
 
 </table>
+</div>
 
-</br></br>
+<br/><br/>
+<div style="height:100px; width: 600px; overflow: auto; margin: auto">
+
 @if (ViewBag.breakingRules != null)
 {
     foreach (string x in ViewBag.breakingRules)
     {
-        @x
-        <br />
+        <div style="color: white; background-color: #b30202; text-align: center; margin-top: 1px">@x</div>
     }
 }
+
+</div>
+
+</body>
