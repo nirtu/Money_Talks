@@ -71,7 +71,7 @@
 </head>
 <body>
     <div id="rightArea">
-        <div id="chartView" style="display: none">Select graph : 
+        <div id="chartView" style="display: none">Select graph :
             <span onclick="change_Chart('pieChart', 'areaChart', 'columnChart', 'barChart');" style="cursor: pointer">Pie </span>&middot;
             <span onclick="change_Chart('areaChart', 'pieChart', 'columnChart', 'barChart');" style="cursor: pointer">Area </span>&middot;
             <span onclick="change_Chart('columnChart', 'pieChart', 'areaChart', 'barChart');" style="cursor: pointer">Column </span>&middot;
@@ -156,7 +156,6 @@
             }
         </div>
 
-@*        <p>@Html.ActionLink("Create New Transaction", "Create")<br/><br/></p>*@
         <div onmouseover="showCreate()" style="width: 150px; margin: auto">Create New Transaction</div>
 
         <div style="height: 50%; width: 58%; background-color: 
@@ -187,7 +186,6 @@
                     <div  id="popupMsg">
                         @foreach (var r in ViewBag.rules)
                         {
-                            @*<strong>&middot;&emsp;</strong>*@
                             @r<br/>
                         }
                     </div>
